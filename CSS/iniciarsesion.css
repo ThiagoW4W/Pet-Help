@@ -1,0 +1,84 @@
+
+/* Etiquetas generales */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    height: 100vh;
+    background-image: url(../Imagenes/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+form{
+    color: #fff;
+    padding: 50px 0 50px 0 ;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 20px;
+}
+label{
+    display: block;
+}
+input{
+    padding-left: 10px;
+    border: 1px solid;
+    border-radius: 12px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+input 
+select,option{
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    border-radius: 12px;
+}
+input[type='submit']{
+    padding: 0;
+    width: 50%;
+    border: 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 
+    box-shadow .5s, /* Nombre y tiempo de la animación */
+    transform .2s ease-in-out,
+    background-color 100ms;
+}
+input[type='submit']:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
+    transform: scale(1.1);
+    background-color: #e2dcdc;
+  }
+
+
+/* Class & Divs */
+.contenedor{
+    border-radius: 2%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(83, 77, 77, 0.5);
+    width: 400px;
+    margin: 100px auto 0px auto
+}
+#ejemplo{
+    font-size: 15px;
+    color: #dad5d5;
+    font-weight: 200;
+}
+#error{
+    margin: 0 10px 0 10px;
+    background-color: #03000c49;
+    font-size: 15px;
+    color: #8d7b77;
+    font-weight: 900;
+}
+.selectIniciar{
+    padding:5px;
+    font-size: 18px;
+    border-radius: 12px;
+}

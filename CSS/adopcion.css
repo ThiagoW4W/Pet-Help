@@ -1,0 +1,94 @@
+/*Etiquetas generales*/
+body{
+    background-image: url(./);
+}
+option{
+    border-radius: 0%;
+}
+input{
+    border-radius: 0;
+}
+input 
+select,option{
+    border-radius: 0%;
+}
+/*Class & IDs*/
+#banner{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../Imagenes/Slider-2-Adopta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.texto{
+    top: 20%;
+}
+
+#mascPerdidas{
+    margin-top: 5vh;
+    padding: 2vh 20vh 2vh 20vh;
+    text-align: center;
+    border-top: 2px solid rgb(154, 128, 128);
+    z-index: 1;
+}
+
+
+.title{
+    display: inline;
+}
+#filtro{
+   float: right ;
+   padding:5px;
+   font-size: 18px;
+}
+
+#tarjetas{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.tarjeta{
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 35vh;
+    height: 40vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+}
+.img-tarjeta{
+    margin: 20px 0 20px 0;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+    object-position: center;
+    height:200px; 
+    width: 200px;
+    transition: 
+    opacity     1s,
+    box-shadow .5s, /* Nombre y tiempo de la animación */
+    transform .2s ease-in-out;
+  }
+
+.adoptar {
+    visibility: hidden;
+    padding: 10px;
+    filter: drop-shadow(8px 8px 4px black);
+    position: absolute;
+    text-align: start;
+    bottom: 22vh;
+    left: 16vh;
+    color: white;
+    font-weight: bold;
+
+  }   
+  .img-tarjeta:hover {
+    cursor: pointer;
+    opacity: 80%;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
+    transform: scale(1.1);
+  }
+
+
+

@@ -1,0 +1,22 @@
+/* Etiquetas generales*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Class & IDs */
+#verano{
+    display: flex;
+    padding: 20px 100px 20px 100px;
+    background-color: red;
+}
+#invierno{
+    padding: 20px 100px 20px 100px;
+    background-color: rgb(8, 0, 255);
+}
+.carta{
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+}
