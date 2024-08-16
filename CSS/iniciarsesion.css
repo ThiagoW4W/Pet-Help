@@ -8,37 +8,40 @@
 body{
     font-family: "Nunito", sans-serif;
     height: 100vh;
-    background-image: url(../Imagenes/Fondo.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
+    background-color: #F5EFE6;
 }
 form{
-    color: #fff;
-    padding: 50px 0 50px 0 ;
+    color: #222;
+    font-weight: 700;
+    padding: 1vh 0 1vh 0 ;
     text-align: center;
-    display:flex;
-    flex-direction: column;
-    row-gap: 20px;
     font-size: 20px;
+    
 }
 label{
     display: block;
 }
 input{
-    padding-left: 10px;
+    background-color: #f2f2f26a;
+    padding: 10px;
     border: 1px solid;
     border-radius: 12px;
     font-family: "Nunito", sans-serif;
     font-size: 20px;
 }
+select{
+    background-color: #f2f2f26a;
+    height:48px;
+}
 input 
 select,option{
+    
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     border-radius: 12px;
 }
 input[type='submit']{
+    margin-top: 2vh;
     padding: 0;
     width: 50%;
     border: 1px solid;
@@ -58,18 +61,8 @@ input[type='submit']:hover{
 
 
 /* Class & Divs */
-.contenedor{
-    border-radius: 2%;
-    backdrop-filter: blur(20px);
-    background-color: rgba(83, 77, 77, 0.5);
-    width: 400px;
-    margin: 100px auto 0px auto
-}
-#ejemplo{
-    font-size: 15px;
-    color: #dad5d5;
-    font-weight: 200;
-}
+
+
 #error{
     margin: 0 10px 0 10px;
     background-color: #03000c49;
@@ -82,3 +75,29 @@ input[type='submit']:hover{
     font-size: 18px;
     border-radius: 12px;
 }
+#contenedorForm{
+    background-color: #4F6F52;
+    width: 100vh;
+    margin: 0 auto;
+    margin-top: 20vh;
+    padding: 5vh;
+    border-radius: 30px;
+}
+#contenedorForm h1{
+    text-align: start;
+    font-size: 60px;
+    padding: 0;
+    margin-left: 2vh;
+}
+#contenedorFlex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.imgperro{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+

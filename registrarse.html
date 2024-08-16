@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="./CSS/iniciarsesion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="contenedorForm">
+        <form action="index.html" id="formInicio">
+            <p id="error"></p>
+            <h1>Registro</h1>
+            <div id="contenedorFlex">
+                <div class="izquierda">
+                    <div class="itemform">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </div>
+                    <div class="itemform">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" required>
+                    </div>
+                    <div class="itemform">
+                        <label for="contrasena">Crear Contraseña:</label>
+                        <input type="text" name="email" id="email" value="" required>
+                    </div>
+                </div>
+                <div class="derecha">
+                    <div class="itemform">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" value="nombre@mail.com" required>
+                    </div>
+                    <div class="itemform">
+                        <label for="tipoUsuario">Tipo de usuario</label>
+                        <select name="tipoUsuario" id="tipoUsuario" class="selectIniciar" required>
+                            <option value="0">--Selecciona una Tipo de usuario--</option>
+                        </select>
+                    </div>
+                    <div class="itemform">
+                        <label for="provincia">Provincia</label>
+                        <select name="provincia" id="provincia" class="selectIniciar" required>
+                            <option value="0">--Selecciona una Provincia--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Registrar" id="Registrar">
+        </form>
+        <div class="imgperro"><img src="Imagenes/Vector-Perro-Login.png" alt=""></div>
+    </section>
+
+
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <script src="./JS/datosUsuarios.js"></script>
+            <script src="./JS/tomarDatos.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
