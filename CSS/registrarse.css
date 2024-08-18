@@ -67,20 +67,7 @@ input[type='submit']:hover{
     font-family: "League Spartan", sans-serif;
     font-size: 70px;
 }
-p{
-    display: inline;
-}
-a{
-    display: inline;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-}
-a:hover{
-    font-size: 20px;
-    color: #c2c2c2;
-    text-decoration: none;
-}
+
 /* Class & Divs */
 
 
@@ -91,34 +78,40 @@ a:hover{
     color: #8d7b77;
     font-weight: 900;
 }
-
+.selectIniciar{
+    padding:5px;
+    font-size: 18px;
+    border-radius: 12px;
+}
 #contenedorForm{
-    display:flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     background-color: #4F6F52;
-    width: 60vh;
-    height: 60vh;
+    width: 100vh;
     margin: 0 auto;
     margin-top: 20vh;
     padding: 5vh;
     border-radius: 30px;
+    z-index: 2;
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.267));
 }
 #contenedorForm h1{
-    text-align: center;
+    text-align: start;
     font-size: 60px;
     padding: 0;
     margin-left: 2vh;
 }
-
+#contenedorFlex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
 .imgperro{
     position: absolute;
     pointer-events: none; /*El mouse no detecta la imagen y no molesta en los clicks*/
-    top: -120px;
+    top: 200px;
+    left: -220px;
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.534));
-   
 }
 
 

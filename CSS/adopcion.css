@@ -1,18 +1,27 @@
 /*Etiquetas generales*/
 body{
-    background-image: url(./);
+    font-family: "Nunito", sans-serif;
+    height: 100vh;
+    background-color: #e8dfca;
+   
 }
-option{
-    border-radius: 0%;
+
+select{
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    border-radius:50px;
+    background-color: #222;
+    color: white;
 }
-input{
-    border-radius: 0;
-}
-input 
-select,option{
-    border-radius: 0%;
-}
+
 /*Class & IDs*/
+.texto{
+    text-align: center;
+    top: 20%;
+    padding: 0 50vh 0 50vh;
+
+}
 #banner{
     width: 100%;
     height: 50vh;
@@ -34,10 +43,14 @@ select,option{
 
 
 .title{
+    font-family: "League Spartan", sans-serif;
+    font-size: 70px;
     display: inline;
+    text-align: center;
 }
 #filtro{
-   float: right ;
+    position: absolute;
+   left: 80%;
    padding:5px;
    font-size: 18px;
 }
@@ -54,9 +67,9 @@ select,option{
     border-radius: 20px;
     border: 1px solid black;
     width: 35vh;
-    height: 40vh;
+    height: 50vh;
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.5);  
+    background-color: #4f6f52;  
 }
 .img-tarjeta{
     margin: 20px 0 20px 0;

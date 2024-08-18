@@ -1,0 +1,88 @@
+.contenedor {
+
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+  }
+      
+  .imagen {
+    backdrop-filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+  }
+      
+  .imagen
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+  }
+      
+  .texto {
+    filter: drop-shadow(8px 8px 4px black);
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    padding: 0 50vh 0 50vh;
+    color: white;
+    font-weight: bold;
+  }    
+  .texto 
+  h2{
+    font-weight: 900;
+  }
+  .contenedor a{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    top : 50%;
+    transform: translateY(-50%);
+  }
+  
+  .anterior{
+    right: 97%;
+  }
+  .siguiente {
+    left: 97%;
+  }    
+  .boton-de-carrusel {
+    position: absolute;
+    top: 5%;
+    left: 95%;
+  } 
+  .puntos {
+    position: absolute;
+    top: 93%;
+    width: 100%;
+    text-align: center;
+  }
+  .punto {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .punto:hover   {
+    cursor: pointer;
+    background-color: gray;
+  }
+  .contenedor a:hover {
+    color: gray;
+  }
+  .actual {
+    visibility: visible;
+    opacity: 1;
+      transition: visibility 1s, opacity 1s;
+  }
+  .activo {
+    background-color: gray;
+  }

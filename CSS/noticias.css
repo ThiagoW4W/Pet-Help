@@ -3,9 +3,16 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: "Nunito", sans-serif;
+    height: 100vh;
+    background-color: #e8dfca;
 
+}
 
 /* Class & IDs */
+
+/* Banner */
 #banner{
     width: 100%;
     height: 50vh;
@@ -13,15 +20,24 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    
 }
+#banner::before{
+    width: 100%;
+    height: 50vh;
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.281); 
+    z-index: 1;
+  }
 .texto{
     text-align: center;
     top: 20%;
     padding: 0 50vh 0 50vh;
+    z-index: 2;
 
 }
+/* FIN Banner */
+
 
 #estaciones{
     display: flex;

@@ -23,6 +23,7 @@ label{
     display: block;
 }
 input{
+
     background-color: #f2f2f26a;
     padding: 10px;
     border: 1px solid;
@@ -68,7 +69,7 @@ input[type='submit']:hover{
     font-size: 70px;
 }
 p{
-    display: inline;
+    margin-bottom: 20px;
 }
 a{
     display: inline;
@@ -107,11 +108,14 @@ a:hover{
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.267));
 }
 #contenedorForm h1{
+    
+    margin: 20px;
     text-align: center;
     font-size: 60px;
     padding: 0;
     margin-left: 2vh;
 }
+
 
 .imgperro{
     position: absolute;

@@ -1,0 +1,198 @@
+/*ETIQUETAS GENERALES*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f5efe6;
+    font-family: "Nunito", sans-serif;
+}
+/*NavBar*/
+nav{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    justify-content: space-around;
+    align-items: center;
+}
+select{
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  border-radius:50px;
+  background-color: #222;
+  color: white;
+}
+nav
+ul{
+    display:inline-block;
+    list-style: none;
+}
+nav
+ul
+li
+img{
+    margin-top: 6px;
+}
+
+nav
+ul
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #222;
+
+}
+nav
+ul
+a:hover{
+    color: #696969;
+}
+nav
+li{ 
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+    float: inline-start;  
+}
+/*FIN NavBar*/
+
+/*CLASS & IDS*/
+
+/*Banner*/
+#banner{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../Imagenes/Banner-Servicios.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -30vh;
+}
+#banner::before{
+  width: 100%;
+  height: 50vh;
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.281); 
+  z-index: 1;
+}
+
+.texto {
+  z-index: 2;
+    filter: drop-shadow(8px 8px 4px black);
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 0;
+    right: 0;
+    padding: 0 50vh 0 50vh;
+    color: white;
+    font-weight: bold;
+  }  
+  .texto 
+  h2{
+    font-weight: 900;
+  }
+/*FIN Banner*/
+
+/*Servicios*/
+#contactos{
+    
+    position: relative;
+    padding: 40px 20vh 2vh 20vh;
+    text-align: center;
+    border-top: 2px solid rgb(154, 128, 128);
+    z-index: 1;
+  } 
+  .title{
+    font-family: "League Spartan", sans-serif;
+    font-size: 70px;
+    display: inline;
+    text-align: center;
+  }
+  #filtro{
+    position: absolute;
+   left: 80%;
+   padding:5px;
+   font-size: 18px;
+  }
+  
+  #tarjetas{
+   margin: 2em 0 2em 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .tarjeta{
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 300px;
+    height: 350px;
+    backdrop-filter: blur(5px);
+    background-color: #4f6f52; 
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.438)); 
+  }
+  .img-tarjeta{
+    margin: 20px 0 20px 0;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+    object-position: center;
+    height:200px; 
+    width: 200px;
+    transition: 
+    opacity     1s,
+    box-shadow .5s, /* Nombre y tiempo de la animación */
+    transform .2s ease-in-out;
+  }
+  
+  .adoptar {
+    visibility: hidden;
+    padding: 10px;
+    filter: drop-shadow(8px 8px 4px black);
+    position: absolute;
+    text-align: start;
+    bottom: 22vh;
+    left: 16vh;
+    color: white;
+    font-weight: bold;
+  
+  }   
+  .img-tarjeta:hover {
+    cursor: pointer;
+    opacity: 80%;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
+    transform: scale(1.1);
+  }
+
+/*FINServicios*/
+
+
+/* Boton de volver */
+   #volverInicio {
+    z-index: 2;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-size: 20px;
+}
+
+#volverInicio:hover {
+    
+    background-color: #0056b3;
+}
+/*FIN Boton de volver */

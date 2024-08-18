@@ -7,7 +7,7 @@ body{
     background-color: #f5efe6;
     font-family: "Nunito", sans-serif;
 }
-
+/*NavBar*/
 nav{
     position: fixed;
     z-index: 2;
@@ -18,7 +18,14 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
-
+select{
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  border-radius:50px;
+  background-color: #222;
+  color: white;
+}
 nav
 ul{
     display:inline-block;
@@ -51,6 +58,7 @@ li{
     justify-content: center;
     float: inline-start;  
 }
+/*FIN NavBar*/
 footer{
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.5);  
@@ -59,179 +67,106 @@ footer{
     justify-content: center;
 }
 /*Class y Id */
-#Bienvenida,#contenedor{
-    padding-top : 30px;
-    background-color:#e8dfca79 ;
-    min-height: 350px;
-    text-align: center;
-    
-}
-#Formulario{
-    background-color: #e8dfca79 ;
-    min-height: 400px;
-    padding: 10px 150px 10px 150px;
 
-    text-align: center;
+.texto{
+  top: 20%;
 }
 
-#Contenedor-preguntas{
-    background-color: #e8dfca79 ;
-    min-height: 400px;
-    padding: 10px 150px 10px 150px;
-    text-align: center;
+#mascPerdidas{
+  position: relative;
+  padding: 520px 20vh 2vh 20vh;
+  text-align: center;
+  border-top: 2px solid rgb(154, 128, 128);
+  z-index: 1;
 }
-#botones{
-    display: flex;
-    padding-top: 75px;
-    justify-content: space-around;
-    align-items: center;
+
+
+.title{
+  font-family: "League Spartan", sans-serif;
+  font-size: 70px;
+  display: inline;
+  text-align: center;
 }
-#botones
-button{
-    position: relative;
-    padding: 20px;
-    border-radius: 100%;
-    border:  solid #FEFFD1;
+#filtro{
+  position: absolute;
+ left: 80%;
+ padding:5px;
+ font-size: 18px;
 }
-#botones
-button:active{
-    border: solid #808080;
+
+#tarjetas{
+ margin: 2em 0 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-#botones
-button
-img{
-    border-radius: 100%;
+.tarjeta{
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  width: 300px;
+  height: 350px;
+  backdrop-filter: blur(5px);
+  background-color: #4f6f52; 
+  filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.438)); 
 }
-.img-boton{
+.img-tarjeta{
+  margin: 20px 0 20px 0;
   object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
   object-position: center;
   height:200px; 
   width: 200px;
   transition: 
+  opacity     1s,
   box-shadow .5s, /* Nombre y tiempo de la animación */
   transform .2s ease-in-out;
 }
-.img-boton:hover{
+
+.adoptar {
+  visibility: hidden;
+  padding: 10px;
+  filter: drop-shadow(8px 8px 4px black);
+  position: absolute;
+  text-align: start;
+  bottom: 22vh;
+  left: 16vh;
+  color: white;
+  font-weight: bold;
+
+}   
+.img-tarjeta:hover {
+  cursor: pointer;
+  opacity: 80%;
   cursor: pointer;
   box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
   transform: scale(1.1);
 }
 
-/* carrusel de fotos-info */
-.contenedor {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  background-color: black;
-}
-    
-.imagen {
-  backdrop-filter: blur(5px);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 0;
-}
-    
-.imagen
-img {
-  position: relative;
-  width: 100%;
-  height: 100%; 
-  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
-  object-position: center; /* Centra la imagen dentro del contenedor */
-}
-    
-.texto {
-  filter: drop-shadow(8px 8px 4px black);
-  position: absolute;
-  text-align: start;
-  top: 35%;
-  padding: 1px 400px 0px 200px;
+/* Boton de volver */
+#volverInicio {
+  z-index: 2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
   color: white;
-  font-weight: bold;
-}    
-.texto 
-h2{
-  font-weight: 900;
-}
-.contenedor a{
-  position: absolute;
-  text-decoration: none;
-  color: white;
-  font-size: 36px;
-  top : 50%;
-  transform: translateY(-50%);
-}
-
-.anterior{
-  right: 97%;
-}
-.siguiente {
-  left: 97%;
-}    
-.boton-de-carrusel {
-  position: absolute;
-  top: 5%;
-  left: 95%;
-} 
-.puntos {
-  position: absolute;
-  top: 93%;
-  width: 100%;
-  text-align: center;
-}
-.punto {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-color: white;
+  border: none;
   border-radius: 50%;
-  margin-right: 5px;
-}
-.punto:hover   {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
   cursor: pointer;
-  background-color: gray;
-}
-.contenedor a:hover {
-  color: gray;
-}
-.actual {
-  visibility: visible;
-  opacity: 1;
-    transition: visibility 1s, opacity 1s;
-}
-.activo {
-  background-color: gray;
-}
-/* Preguntas Frecuentes */
-
-.preguntas label {
-  display: block;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  font-size: 20px;
 }
 
-.checkbox:checked ~ .respuesta { /* Si la checkbox está chekeada afecha a la caja de respuesta */
-  background-color: pink;
-  max-height: 1000px;
-  padding-top: 15px;
-  margin-bottom: 15px;
-  transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
-} 
-.respuesta {
-  max-height: 0;
-  margin-bottom: 0;
-  overflow: hidden;
+#volverInicio:hover {
+  
+  background-color: #0056b3;
 }
+/*FIN Boton de volver */
 
-.checkbox {
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  position: absolute;
 
-}
-.preguntas label:hover {
-  background: #d60510;
-  color: #fff;
-  cursor: pointer;
-}
+
