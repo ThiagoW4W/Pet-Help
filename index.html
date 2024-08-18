@@ -1,113 +1,41 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .background {
+      position: relative;
+      background-image: url('./Imagenes/Slider-3-Servicios.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh; /* Ajusta según lo que necesites */
+    }
+
+    .background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Cambia el color y opacidad */
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2; /* Asegura que el contenido esté por encima de la capa semi-transparente */
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <section id="Navbar">
-        <nav>
-            <ul>
-                <li><img src="./Imagenes/logo.png" alt="" title="" width="190px"></li>
-            </ul>
-            <ul>
-                <li><a href="">Publicación</a></li>
-                <li><a href="">Bienestar</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="adopcion.html">Adopción</a></li>
-                <li><a href="">Servicios</a></li>
-            </ul>
-            <ul class="Der">
-                <li><a href="">Iniciar Sesion</a></li>
-                <li><a href="">Registrarte</a></li>
-            </ul>
-        </nav>
-    </section>
-    <section id="Bienvenida">
-        <div class="contenedor">
-            <div class="imagen actual">
-              <img src="./Imagenes/Slider-0-Presentacion.jpg" />
-              <div class="texto">
-                <h2>Presentacion</h2> 
-                <p>Encontrarás todo lo que necesitas para brindarle un hogar amoroso a un perro necesitado. Explora nuestra sección de adopción para conocer a los perros que buscan una familia.
-                    También, estamos comprometidos a ayudar a encontrar y publicar perros perdidos o abandonados, facilitando su regreso a casa o encontrando un nuevo hogar lleno de cariño.
-                    
-                    Únete a nosotros y haz la diferencia en la vida de un perro hoy mismo. ¡Gracias por ser parte de esta comunidad dedicada al bienestar de las mascotas!</p>
-                </div>
-            </div>
-            
-            <div class="imagen">
-              <img src="./Imagenes/Slider-1-Veterinaria.jpg" />
-              <div class="texto">
-                <h2>Publicación de perros perdidos o sin hogar</h2>
-                <p>Puedes publicar información sobre perros perdidos o en situación de calle para ayudarlos a encontrar un hogar seguro. Nuestro objetivo es reunir a las mascotas perdidas con sus familias o encontrarles nuevos hogares llenos de amor y cuidados. Si has encontrado un perro o tu mascota se ha extraviado, comparte los detalles aquí y ayúdanos a hacer que más colas vuelvan a moverse de alegría. ¡Juntos podemos marcar la diferencia!</p></div>
-            </div>
-            
-            <div class="imagen">
-              <img src="./Imagenes/Prueba.png" />
-              <div class="texto">
-                <h2>Adopta un Amigo</h2>
-                <p>Te invitamos a conocer a los perros que esperan ansiosamente una familia. Cada uno tiene una historia única y mucho amor para dar. Descubre a tu nuevo mejor amigo y bríndale un hogar lleno de cariño
-                ¡Adopta y transforma vidas hoy mismo!</p>
-              </div>
-            </div>
-            
-            <div class="imagen">
-              <img src="./Imagenes/Slider-3-Servicios.jpg" />
-              <div class="texto">
-                <h2>Servicios para Mascotas</h2>
-                <p>No solo ayudamos a encontrar hogares para perros, sino que también ofrecemos una variedad de servicios para asegurar su bienestar. Contamos con cuidadores expertos, paseadores confiables y lugares de tránsito seguros. Nuestro objetivo es brindar apoyo integral para que tu mascota siempre esté feliz y bien cuidada.
-                  ¡Descubre nuestros servicios y dale a tu mascota la mejor atención!</p>
-              </div>
-            </div>
-
-            <a href="#" class="anterior" onclick="anterior();">&#10094;</a>
-            <a href="#" class="siguiente" onclick="siguiente();">&#10095;</a>
-            
-            <div class="puntos">
-              <span class="punto activo" onclick="mostrar(0);"></span>
-              <span class="punto" onclick="mostrar(1);"></span>
-              <span class="punto" onclick="mostrar(2);"></span>
-              <span class="punto" onclick="mostrar(3);"></span>
-            </div>
-            
-
-          </div>
-          
-    </section>
-    <section id="Formulario">
-        <h2>Tipo de animal</h2>
-        <div id="botones">
-            <button class="boton-de-formulario">
-                <img class="img-boton" src="./Imagenes/Boton-1-Gato.jpeg" alt="Opción-Gato" title="Boton-Gato" >
-            </button>
-            <button class="boton-de-formulario">
-                <img class="img-boton" src="./Imagenes/Boton-2-Perro.jpeg" alt="Opción-Gato" title="Boton-Perro">
-            </button>
-            <button class="boton-de-formulario">
-                <img class="img-boton" src="./Imagenes/Boton-3-Otros.jpeg" alt="Opción-Gato" title="Boton-Otros-Tipo">
-            </button>
-        </div>
-    </section>
-    <section id="Contenedor-preguntas">
-        <h1>Preguntas</h1>
-        <input class="checkbox" type="checkbox" name="preguntas" id="pregunta1"/>
-        <label for="pregunta1" class="pregunta1">¿Como nos llamamos?</label>
-        <div class="respuesta"><p>Nos llamamos Maria jaja</p></div>
+  <div class="background">
+    <div class="content">
+      <h1>Contenido sobre la imagen</h1>
     </div>
-    </section>
-    <section id="Botones">
-        </ul>
-    </section>
-    <footer>   
-    </footer>
-    <script src="./JS/carrusel.js"></script>
-    <script src="./JS/datosUsuarios.js"></script>
-    <script src="./JS/script.js"></script>
+  </div>
 </body>
 </html>

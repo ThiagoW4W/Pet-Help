@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienestar</title>
+    <link rel="stylesheet" href="./CSS/bienestar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="./JS/script.js" ></script>
+</head>
+<body>
+    <section id="Navbar">
+        <nav>
+            <ul>
+                <li><img src="./Imagenes/logo.png" alt="" title="" width="190px"></li>
+            </ul>
+            <ul>
+                <li><a href="publiacion.html">Publicación</a></li>
+                <li><a href="bienestar.html">Bienestar</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+            </ul>
+            <ul class="Der">
+                <li><a href="inciarsesion.html">Iniciar Sesion</a></li>
+                <li><a href="registrarse.html">Registrarte</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div id="banner"> <div class="texto">
+        <h2>Bienestar Animal</h2>
+        <p>Aquí encontrarás una lista útil y detallada de contactos importantes, que incluye veterinarias, lugares de tránsito y organizaciones especializadas en el bienestar de tus compañeros peludos. Nuestro objetivo es ofrecerte recursos accesibles y confiables para que puedas encontrar 
+            la ayuda y el soporte que necesitas para mantener a tus mascotas en óptimas condiciones. ¡Explora nuestros contactos y asegura el mejor cuidado para tus fieles amigos!</p>
+    </div></div>
+    <!--Caja que contiene todas las secciones-->
+    <section id="contactos">
+
+        <!--Veterinarias-->
+
+        <h1 class="title">Veterinarias</h1>
+        <select id="filtro" name="" id="filtro">
+            <option value="0">Filtro</option>
+        </select>
+        <div id="tarjetas">
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+        </div>
+
+        <!--Organizaciones-->
+
+        <h1 class="title">Organizaciones</h1>
+        <select name="" id="filtro">
+            <option value="0">Filtro</option>
+        </select>
+        <div id="tarjetas">
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+        </div>
+
+        <!--Lugares de transito-->
+        
+        <h1 class="title">Lugares de transito</h1>
+        <select name="" id="filtro">
+            <option value="0">Filtro</option>
+        </select>
+        <div id="tarjetas">
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+        </div>
+    </section>
+    <button id="volverInicio" onclick="volverInicio()">↑</button>
+    
+</body>
+</html>

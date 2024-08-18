@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="stylesheet" href="./CSS/iniciarsesion.css">
+    <link rel="stylesheet" href="./CSS/registrarse.css">
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <section id="contenedorForm">
@@ -16,7 +21,7 @@
                 <div class="izquierda">
                     <div class="itemform">
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" required>
+                        <input type="text" name="nombre" id="nombre" required> 
                     </div>
                     <div class="itemform">
                         <label for="apellido">Apellido</label>
@@ -30,18 +35,44 @@
                 <div class="derecha">
                     <div class="itemform">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" value="nombre@mail.com" required>
+                        <input type="text" name="email" id="email" placeholder="nombre@mail.com" required>
                     </div>
                     <div class="itemform">
                         <label for="tipoUsuario">Tipo de usuario</label>
                         <select name="tipoUsuario" id="tipoUsuario" class="selectIniciar" required>
                             <option value="0">--Selecciona una Tipo de usuario--</option>
+                            <option value="Usuario">Usuario</option>
+                            <option value="Pasedor/a">Pasedor/a</option>
+                            <option value="Organizaciones/Veterinaria">Organizaciones/Veterinaria</option>
                         </select>
                     </div>
                     <div class="itemform">
                         <label for="provincia">Provincia</label>
                         <select name="provincia" id="provincia" class="selectIniciar" required>
                             <option value="0">--Selecciona una Provincia--</option>
+                            <option value="buenosaires">Buenos Aires</option>
+                            <option value="catamarca">Catamarca</option>
+                            <option value="cordoba">Córdoba</option>
+                            <option value="corrientes">Corrientes</option>
+                            <option value="chaco">Chaco</option>
+                            <option value="chubut">Chubut</option>
+                            <option value=" EntreRios">Entre Ríos</option>
+                            <option value="formosa">Formosa</option>
+                            <option value="jujuy">Jujuy</option>
+                            <option value="la_pampa">La Pampa</option>
+                            <option value="la_rioja">La Rioja</option>
+                            <option value="mendoza">Mendoza</option>
+                            <option value="misiones">Misiones</option>
+                            <option value="neuquen">Neuquén</option>
+                            <option value="rionegro">Río Negro</option>
+                            <option value="salta">Salta</option>
+                            <option value="san_juan">San Juan</option>
+                            <option value="san_lucas">San Luis</option>
+                            <option value="santa_cruz">Santa Cruz</option>
+                            <option value="santa_fe">Santa Fe</option>
+                            <option value="santiago_del_estero">Santiago del Estero</option>
+                            <option value="tucuman">Tucumán</option>
+                            <option value="tierra_del_fuego">Tierra del Fuego</option>
                         </select>
                     </div>
                 </div>

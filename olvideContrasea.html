@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicia Sesión</title>
-    <link rel="stylesheet" href="./CSS/iniciarsesion.css">
+    <title>Olvide Contraseña</title>
+    <link rel="stylesheet" href="./CSS/olvideContra.css">
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,24 +16,21 @@
     <section id="contenedorForm">
         <form action="index.html" id="formInicio">
             <p id="error"></p>
-            <h1>Inicia Sesión</h1>
+            <h1>Cambiar contraseña</h1>
            
-                
+                <p>Introduce el correo electrónico o el número que se encuentra
+                    asociado a tu cuenta para cambiar tu contraseña </p>
                     <div class="itemform">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" required autocomplete="off"> 
+                        
+                        <label for="contacto">Email o número tel.</label>
+                        <input type="text" name="contacto" id="contacto" required autocomplete="off"> 
                     </div>
 
-                    <div class="itemform">
-                        <label for="contrasena">Contraseña:</label>
-                        <input type="text" name="email" id="email" value="" required autocomplete="off">
-                    </div>
-                    <a href="olvideContrasea.html">Olvide mi Contraseña</a>
                
                
             <input type="submit" value="Ingresar" id="Registrar">
             <div></div>
-            <p>No tienes una cuenta? </p><a href="registrarse.html">Crea una ahora</a>
+      
         </form>
         <div class="imgperro"><img src="Imagenes/Vector-Gato-Login.png" width="150px"></div>
     </section>
