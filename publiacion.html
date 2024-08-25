@@ -13,6 +13,44 @@
     <title>Adopción</title>
 </head>
 <body>
+        <!-- Modal universal que estará oculto inicialmente -->
+        <div id="modal" style="display: none;">
+          <div class="modal-content">
+            <span id="close-btn">x</span>
+            <h1 style="text-align: center; margin: 0; ;">Nueva Mascota</h1>
+            <div id="modal-body">
+              <div class="contenedor-1">
+                <p>Ursula</p>
+                <img class="img-tarjeta-emergente" src="./Imagenes/img-tarjeta-prueba.jpg" alt="" width="200px"></div>
+              <div class="contenedor-2">
+                <p class="titulo">Titulo</p>
+                <p class="contenido-p">Contenido</p>
+                <p></p>
+              </div>
+              <div class="contenedor-3">
+                <p class="titulo">Titulo</p>
+                <p class="contenido-p">Contenido</p>
+              </div>
+              <div class="contenedor-4">
+                <span>Ubicacion </span><span> Fecha</span>
+              </div>
+              <div class="contenedor-5"> 
+                <p style="text-align: center;">Datos Generales</p>
+                <p>Edad: <span>5 años</span>
+                  <br>
+                  Sexo: <span>Hembra</span>
+                  <br>
+                  Color: <span>Multicolor</span>
+                </p></div>
+              <div class="contenedor-6">
+                <p style="text-align: center;">Apariencia Fisica</p>
+              </div>
+              <button id="boton-contactar">Contactar</button>
+            </div>
+         
+          </div>
+          
+        </div>
     <section id="Navbar">
         <nav>
             <ul>
@@ -69,8 +107,7 @@
             <option value="0">Filtro</option>
         </select>
         <div id="tarjetas">
-            
-            <div class="tarjeta"><h1>Nombre</h1> <p class="adoptar">Adoptar</p> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h1>Nombre</h1><button class="agregarBoton" data-content= 'xd' ></button> </div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
@@ -94,6 +131,46 @@
         </div>
     </section>
     <button id="volverInicio" onclick="volverInicio()">↑</button>
-   
+    <script>
+        // Obtén el modal y el contenido del modal
+        const modal = document.getElementById("modal");
+        const modalBody = document.getElementById("modal-body");
+        const closeBtn = document.getElementById("close-btn");
+      
+        // Todas las tarjetas
+        const cards = document.querySelectorAll(".img-tarjeta");
+        const body = document.body
+        // Evento de clic en cada tarjeta
+        cards.forEach(card => {
+          card.addEventListener("click", function() {
+            // Cambia el contenido del modal dinámicamente basado en la tarjeta clicada
+           
+            
+            // Muestra el modal
+            modal.style.visibility = "visible";
+            modalBody.style.visibility = "visible";
+            modalBody.style.display = "grid"
+            modal.style.display = "grid"
+
+        
+          });
+        });
+      
+        // Cierra el modal cuando se hace clic en el botón de cerrar
+        closeBtn.addEventListener("click", function() {
+          modalBody.style.visibility = "hidden";
+          modal.style.visibility = "hidden";
+          body.style.overflow ='visible';
+        });
+      
+        // Cierra el modal si se hace clic fuera del modal
+        window.addEventListener("click", function(event) {
+          if (event.target === modal  ) {
+            modalBody.style.visibility = "hidden";
+          modal.style.visibility = "hidden";
+          body.style.overflow ='visible';
+          }
+        });
+      </script>
 </body>
 </html>
