@@ -1,0 +1,127 @@
+body{
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    font-family: "Nunito", sans-serif;
+}
+  .modal-content {
+
+    gap: 20px; /* Espacio entre columnas */
+    background-color: #4f6f52;
+    margin: 10vh auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  #modal-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1px;
+  }
+  
+  
+  
+  .contenedor-1 {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    background-position: center;
+    border-radius: 20px;
+    width: 200px;
+    height: 310px;
+    text-align: center;
+    justify-content:center;
+    align-content:center;
+}
+
+.contenedor-1 p{
+  font-size: 20px;
+  margin: 0;
+}
+  .contenedor-2 {
+    text-align: center;
+    
+    grid-row: 1/2;
+    grid-column: 2/3;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+    width: 150px;
+    height: 80px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+  }
+
+  .contenedor-3 {
+    text-align: center;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+    width: 150px;
+    height: 80px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+
+    align-content:center;
+  }
+
+  .contenedor-4 {
+    text-align: center;
+    margin-top: -15px;
+    grid-row: 2/4;
+    grid-column: 2/4;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+    width: 349px;
+    height: 80px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+    align-content:center;
+  }
+  .contenedor-4 span{
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .contenedor-5 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    border-top: 2px white solid;
+    border-bottom: 2px white solid;
+    margin-top: -30px;
+    width: 160px;
+    margin-right: -40px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+  }
+  .contenedor-6 {
+    margin-top: -30px;
+    margin-left: -40px;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    border-top: 2px white solid;
+    border-left: 2px white solid;
+    border-bottom: 2px white solid;
+    width: 160px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+  }
+.titulo{
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.contenido-p{
+  font-size: 25px;
+  margin-top: 5px;
+}
+#boton-contactar{
+  color: white;
+  border: solid;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 10px;
+  margin: 10px;
+  grid-column: 2/3;
+}
