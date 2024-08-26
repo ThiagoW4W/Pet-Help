@@ -48,3 +48,40 @@ li{
     justify-content: center;
     float: inline-start;  
 }
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    padding: 8px 16px;
+}
+
+nav ul li .dropdown li a {
+    text-decoration: none;
+    color: #222;
+    display: block;
+}
+
+nav ul li .dropdown li a:hover {
+   color: #000000;
+   font-weight: 500;
+}
