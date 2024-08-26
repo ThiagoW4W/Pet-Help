@@ -64,7 +64,7 @@ nav ul li .dropdown {
     list-style: none;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
-    text-align: center;
+    text-align: start;
     
     
 }
@@ -79,6 +79,7 @@ nav ul li .dropdown li {
 }
 
 nav ul li .dropdown li a {
+    text-align: start;
     text-decoration: none;
     color: #222;
     display: block;

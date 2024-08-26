@@ -43,11 +43,19 @@ footer{
   text-align: center;
 }
 #filtro{
+
   position: absolute;
  left: 80%;
  padding:5px;
  font-size: 18px;
+ transition: 
+ border-radius .50s;
+ cursor: pointer;
 }
+#filtro:hover{
+  border-radius: 0;
+}
+
 
 #tarjetas{
  margin: 2em 0 2em 0;
@@ -95,6 +103,7 @@ footer{
   color: white;
   font-weight: bold;
 
+
 }   
 
 
@@ -138,6 +147,7 @@ footer{
   
   background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
 }
+
 
 .modal-content {
 

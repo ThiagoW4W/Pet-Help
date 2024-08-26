@@ -7,58 +7,7 @@ body{
     background-color: #f5efe6;
     font-family: "Nunito", sans-serif;
 }
-/*NavBar*/
-nav{
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.5);  
-    justify-content: space-around;
-    align-items: center;
-}
-select{
-  text-align: center;
-  height: 40px;
-  width: 100px;
-  border-radius:50px;
-  background-color: #222;
-  color: white;
-}
-nav
-ul{
-    display:inline-block;
-    list-style: none;
-}
-nav
-ul
-li
-img{
-    margin-top: 6px;
-}
 
-nav
-ul
-a{
-    text-decoration: none;
-    font-size: 20px;
-    color: #222;
-
-}
-nav
-ul
-a:hover{
-    color: #696969;
-}
-nav
-li{ 
-    margin-right: 10px;
-    text-align: center;
-    justify-content: center;
-    float: inline-start;  
-}
-/*FIN NavBar*/
 
 /*CLASS & IDS*/
 
@@ -118,8 +67,13 @@ li{
    left: 80%;
    padding:5px;
    font-size: 18px;
+   transition: 
+   border-radius .50s;
+   cursor: pointer;
   }
-  
+  #filtro:hover{
+    border-radius: 0;
+  }
   #tarjetas{
    margin: 2em 0 2em 0;
     display: flex;
