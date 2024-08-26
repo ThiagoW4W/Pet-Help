@@ -127,7 +127,13 @@ footer{
   box-shadow .5s, /* Nombre y tiempo de la animación */
   transform .2s ease-in-out;
 }
-
+.img-tarjeta:hover {
+  cursor: pointer;
+  opacity: 80%;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
+  transform: scale(1.1);
+}
 .adoptar {
   visibility: hidden;
   padding: 10px;
@@ -140,13 +146,7 @@ footer{
   font-weight: bold;
 
 }   
-.img-tarjeta:hover {
-  cursor: pointer;
-  opacity: 80%;
-  cursor: pointer;
-  box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
-  transform: scale(1.1);
-}
+
 
 /* Boton de volver */
 #volverInicio {
@@ -208,8 +208,11 @@ footer{
   grid-gap: 1px;
 }
 
-
-
+#close-btn{
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+}
 .contenedor-1 {
   grid-row: 1/4;
   grid-column: 1/2;
@@ -294,22 +297,35 @@ footer{
 }
 .titulo{
  
-color: white;
-font-weight: 900;
-font-size: 15px;
-margin-bottom: 0;
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 .contenido-p{
 
-font-size: 25px;
-margin-top: 5px;
+  font-size: 25px;
+  margin-top: 5px;
 }
 #boton-contactar{
-color: white;
-border: solid;
-border-radius: 20px;
-background-color: rgba(255, 0, 0, 0);
-padding: 10px;
-margin: 10px;
-grid-column: 2/3;
+  color: white;
+  border: solid;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 10px;
+  margin: 10px;
+  grid-column: 2/3;
+  transition: 
+  opacity     1s,
+  box-shadow .5s, /* Nombre y tiempo de la animación */
+  transform .2s ease-in-out,
+  font-size .2s;
+}
+#boton-contactar:hover {
+  cursor: pointer;
+  opacity: 80%;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
+  transform: scale(1.1);
+  font-size: 18px;
 }
