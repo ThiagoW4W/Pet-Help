@@ -42,7 +42,7 @@ footer{
   display: inline;
   text-align: center;
 }
-#filtro{
+.filtro{
 
   position: absolute;
  left: 80%;
@@ -52,12 +52,12 @@ footer{
  border-radius .50s;
  cursor: pointer;
 }
-#filtro:hover{
+.filtro:hover{
   border-radius: 0;
 }
 
 
-#tarjetas{
+.tarjetas{
  margin: 2em 0 2em 0;
   display: flex;
   justify-content: center;

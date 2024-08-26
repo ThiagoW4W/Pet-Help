@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="./JS/script.js" ></script>
+    <script defer src="./JS/fetchs/navbar.js"></script>
 </head>
 <body>
     <div id="Navbar"></div>
-    <script src="./JS/navbar.js"></script>
+
     <div id="banner"> <div class="texto">
         <h2>Servicios para Mascotas</h2>
         <p>No solo ayudamos a encontrar hogares para perros, sino que también ofrecemos una variedad de servicios para asegurar su bienestar. Contamos con cuidadores expertos, paseadores confiables y lugares de tránsito seguros. Nuestro objetivo es brindar apoyo integral para que tu mascota siempre esté feliz y bien cuidada.
@@ -24,10 +25,10 @@
         <!--Paseadores-->
 
         <h1 id="paseadores" class="title">Paseadores</h1>
-        <select id="filtro" name="" id="filtro">
+        <select id="filtro" name="filtro" class="filtro">
             <option value="0">Filtro</option>
         </select>
-        <div id="tarjetas">
+        <div class="tarjetas">
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
@@ -37,17 +38,17 @@
         <!--Cuiadadores-->
 
         <h1 id="cuidadores" class="title">Cuiadadores</h1>
-        <select name="" id="filtro">
+        <select name="filtro" class="filtro">
             <option value="0">Filtro</option>
         </select>
-        <div id="tarjetas">
+        <div class="tarjetas">
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
             <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
         </div>
 
-
+   </section>
     <button id="volverInicio" onclick="volverInicio()">↑</button>
     
 </body>

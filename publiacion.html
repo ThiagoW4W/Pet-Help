@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="./JS/script.js" ></script>
     <script defer src="./JS/carrusel.js"></script>
+    <script defer src="./JS/pop-ups.js"></script>
+    <script defer src="./JS/fetchs/navbar.js"></script>
     <title>Adopción</title>
 </head>
 <body>
@@ -22,7 +24,7 @@
             <div id="modal-body">
               <div class="contenedor-1">
                 <p>Ursula</p>
-                <img class="img-tarjeta-emergente" src="./Imagenes/img-tarjeta-prueba.jpg" alt="" width="200px"></div>
+                <img class="img-tarjeta-emergente" src="./Imagenes/img-tarjeta-prueba.jpg" alt="" width="200"></div>
               <div class="contenedor-2">
                 <p class="titulo">Titulo</p>
                 <p class="contenido-p">Contenido</p>
@@ -53,11 +55,11 @@
           
         </div>
         <div id="Navbar"></div>
-        <script src="./JS/navbar.js"></script>
-    </section>
+        
+    
         <div class="contenedor">
             <div class="imagen actual">
-              <img src="./Imagenes/Slider-0-Presentacion.jpg" />
+              <img src="Imagenes/Slider-0-Presentacion.jpg" alt="Slider" title="Presentacion"  >
               <div class="texto">
                 <h2>Presentacion</h2> 
                 <p>Encontrarás todo lo que necesitas para brindarle un hogar amoroso a un perro necesitado. Explora nuestra sección de adopción para conocer a los perros que buscan una familia.
@@ -66,13 +68,13 @@
                 </div>
             </div>
             <div class="imagen">
-              <img src="./Imagenes/Slider-1-Veterinaria.jpg" />
+              <img src="Imagenes/Slider-1-Veterinaria.jpg" alt="Slider" title="Publicación"  >
               <div class="texto">
                 <h2>Publicación de perros perdidos o sin hogar</h2>
-                <p>Puedes publicar información sobre perros perdidos o en situación de calle para ayudarlos a encontrar un hogar seguro. Nuestro objetivo es reunir a las mascotas perdidas con sus familias o encontrarles nuevos hogares llenos de amor y cuidados. Si has encontrado un perro o tu mascota se ha extraviado, comparte los detalles aquí y ayúdanos a hacer que más colas vuelvan a moverse de alegría. ¡Juntos podemos marcar la diferencia!</p></div>
+                <p>Puedes publicar información sobre perros perdidos o en situacón de calle para ayudarlos a encontrar un hogar seguro. Nuestro objetivo es reunir a las mascotas perdidas con sus familias o encontrarles nuevos hogares llenos de amor y cuidados. Si has encontrado un perro o tu mascota se ha extraviado, comparte los detalles aquí y ayúdanos a hacer que más colas vuelvan a moverse de alegría. ¡Juntos podemos marcar la diferencia!</p></div>
             </div>
             <div class="imagen">
-              <img src="./Imagenes/Prueba.png" />
+              <img src="Imagenes/Prueba.png" alt="Slider" title="Adopta">
               <div class="texto">
                 <h2>Adopta un Amigo</h2>
                 <p>Te invitamos a conocer a los perros que esperan ansiosamente una familia. Cada uno tiene una historia única y mucho amor para dar. Descubre a tu nuevo mejor amigo y bríndale un hogar lleno de cariño
@@ -80,7 +82,7 @@
               </div>
             </div>
             <div class="imagen">
-              <img src="./Imagenes/Slider-3-Servicios.jpg" />
+              <img src="Imagenes/Slider-3-Servicios.jpg" alt="Slider" title="Servicios" >
               <div class="texto">
                 <h2>Servicios para Mascotas</h2>
                 <p>No solo ayudamos a encontrar hogares para perros, sino que también ofrecemos una variedad de servicios para asegurar su bienestar. Contamos con cuidadores expertos, paseadores confiables y lugares de tránsito seguros. Nuestro objetivo es brindar apoyo integral para que tu mascota siempre esté feliz y bien cuidada.
@@ -89,75 +91,36 @@
         </div>
 
     <section id="mascPerdidas">
-        <h1 id="adopción" class="title">Adopción</h1>
-        <select id="filtro" name="" id="filtro">
+        <h2 id="adopción" class="title">Adopción</h2>
+        <select id="filtro" name="filtro" class="filtro">
             <option value="0">Filtro</option>
         </select>
-        <div id="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1><button class="agregarBoton" data-content= 'xd' ></button> </div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+        <div class="tarjetas">
+            <div class="tarjeta"><h2>Nombre</h2><button class="agregarBoton" data-content= 'xd' ></button> </div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
 
         </div>
   
     
-        <h1 id="perdidos" class="title">Perdidos</h1>
-        <select name="" id="filtro">
+        <h2 id="perdidos" class="title">Perdidos</h2>
+        <select name="filtro" class="filtro">
             <option value="0">Filtro</option>
         </select>
-        <div id="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+        <div class="tarjetas">
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+            <div class="tarjeta"><h2>Nombre</h2> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-prueba.jpg" alt="Opción-Gato" title="Boton-Perro"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
         </div>
     </section>
+   </div>
     <button id="volverInicio" onclick="volverInicio()">↑</button>
-    <script>
-        // Obtén el modal y el contenido del modal
-        const modal = document.getElementById("modal");
-        const modalBody = document.getElementById("modal-body");
-        const closeBtn = document.getElementById("close-btn");
-      
-        // Todas las tarjetas
-        const cards = document.querySelectorAll(".img-tarjeta");
-        const body = document.body
-        // Evento de clic en cada tarjeta
-        cards.forEach(card => {
-          card.addEventListener("click", function() {
-            // Cambia el contenido del modal dinámicamente basado en la tarjeta clicada
-           
-            
-            // Muestra el modal
-            modal.style.visibility = "visible";
-            modalBody.style.visibility = "visible";
-            modalBody.style.display = "grid"
-            modal.style.display = "grid"
-
-        
-          });
-        });
-      
-        // Cierra el modal cuando se hace clic en el botón de cerrar
-        closeBtn.addEventListener("click", function() {
-          modalBody.style.visibility = "hidden";
-          modal.style.visibility = "hidden";
-          body.style.overflow ='visible';
-        });
-      
-        // Cierra el modal si se hace clic fuera del modal
-        window.addEventListener("click", function(event) {
-          if (event.target === modal  ) {
-            modalBody.style.visibility = "hidden";
-          modal.style.visibility = "hidden";
-          body.style.overflow ='visible';
-          }
-        });
-      </script>
+ 
 </body>
 </html>
