@@ -76,13 +76,17 @@ function convertirABase64(file) {
     });
 }
 
-function crearBotonPaseador(docId, nombrePaseador, DescpcionPaseador) {
+async function crearBotonPaseador(docId, nombrePaseador, DescpcionPaseador) {
     const divContainer = document.createElement('div'); //Crea un div
     divContainer.classList.add('tarjeta'); //Le pone la clase tarjeta
     const button = document.createElement('button'); //Crea un botón
     button.classList.add('boton-paseador-nuevo');  // Agregar clase al botón
     document.getElementById('tarjeta').appendChild(divContainer); // Agregar el div a la sección de paseadores
     divContainer.appendChild(button); // Agregar botón dentro del div
+    
+    const imagenDelBoton = document.createElement('img');  // Crea el  img
+    imagenDelBoton.setAttribute('data-id-Paseador', docId);  // Usar un atributo único como 'data-id'
+    button.appendChild(imagenDelBoton);  // Agrega la imagen al botón
 
     const titulo = document.createElement('h2');
     titulo.textContent = nombrePaseador;
@@ -91,7 +95,23 @@ function crearBotonPaseador(docId, nombrePaseador, DescpcionPaseador) {
     const subtitulo = document.createElement('p');
     subtitulo.textContent = DescpcionPaseador;
     divContainer.appendChild(subtitulo);
+//Poner la imagen de la BD en imagenDelBoton
+const docRef = doc(db, 'Paseadores', docId);
+const docSnap = await getDoc(docRef);
 
+if (docSnap.exists()) {
+    const data = docSnap.data();
+    console.log("existe");
+    
+    // Aquí, en lugar de `document.getElementById('imagenDelBoton')`, usas `data-id`
+    const imagenElemento = button.querySelector('[data-id-Paseador="' + docId + '"]');
+    
+    if (imagenElemento) {
+        imagenElemento.src = data.fotoPaseador || '';  // Agregar la imagen al botón
+    }
+
+    console.log(data.fotoPaseadorsssss);
+}
     button.onclick = async () => {
         // Mostrar el modal con los datos del paseador
         await ObtenerYrellenarPaseador(docId);

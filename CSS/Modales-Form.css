@@ -1,19 +1,38 @@
 /* FORMULARIO AGREGAR MASCOTA EN ADOPCION */
+input{
+    background-color: #f2f2f26a;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 12px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+textarea{
+  
+    resize: none;
+    width: 200px;
+    height: 100px;
+}
+
 #addModalMascota{
+    align-items: center;
     border-radius: 20px;
     background-color:  #4f6f52; 
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 800px;
     margin: 0 auto;
     margin-top: 100px;
 }
 
-#addDataFormMascotaAdopcion{
+#addDataForm{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
 #botonesAgregar {
+    
     display:block;
     background-color: none;
 }
@@ -43,6 +62,10 @@
     font-size: 20px;
 
 }
+#close-btn-mascota{
+    display: flex;
+    padding: 10px 10px 0px ;
+}
 /* FIN FORMULARIO AGREGAR MASCOTA EN ADOPCION */
 
 /* FORMULARIO AGREGAR MASCOTA PERDIDA */
@@ -50,11 +73,18 @@
     border-radius: 20px;
     background-color:  #4f6f52; 
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 800px;
+    
     margin: 0 auto;
     margin-top: 100px;
   }
+#addDataFormPerdido{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* FIN FORMULARIO AGREGAR MASCOTA PERDIDA */

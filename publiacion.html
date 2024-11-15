@@ -22,35 +22,43 @@
     <dialog id="addModalMascota">
     <span id="close-btn-mascota" onclick="document.getElementById('addModalMascota').close()">X</span>
           <h2>Agregar Mascota en Adopción</h2>
-          
           <form id="addDataForm">
-            
-            <label for="nombre">Nombre:</label>
-            <div><input type="text" id="nombre" required></div>
-            <label for="Provincia">Provincia:</label>
-            <div><input type="text" id="Provincia" required></div>
-            <label for="Localidad">Localidad:</label>
-            <div><input type="text" id="Localidad" required></div>
-            <label for="Barrio">Barrio:</label>
-            <div><input type="text" id="Barrio" required></div>
-            <label for="Contacto">Numero de Telefono:</label>
-            <div><input type="text" id="Contacto" required></div>
-            <label for="DatosGenerales">Datos Generales:</label>
-            <div></div><textarea name="" id="DatosGenerales"></textarea></div>
-            <div><label for="Apariencia">Apariencia:</label></div>
-            <div></div><textarea name="" id="Apariencia"></textarea></div>
-            <div><label for="">Foto de su Mascota </label></div>
-            <div><input type="file" id="fotoMascotaAdopcion" accept="image/*"></div>
-            <div id="botonesAgregar">
-            <button type="submit" class="BotonAgregar">Guardar</button>
+            <div id="addDataFormIzquierda">
+              <label for="nombre">Nombre:</label>
+              <div><input type="text" id="nombre" required></div>
+              <label for="Provincia">Provincia:</label>
+              <div><input type="text" id="Provincia" required></div>
+              <label for="Localidad">Localidad:</label>
+              <div><input type="text" id="Localidad" required></div>
+              <label for="Barrio">Barrio:</label>
+              <div><input type="text" id="Barrio" required></div>
+              <label for="Contacto">Numero de Telefono:</label>
+              <div><input type="text" id="Contacto" required></div>
             </div>
+            <div id="addDataFormDerecha">
+
+              <label for="DatosGenerales">Datos Generales:</label>
+              <div><textarea name="" id="DatosGenerales"></textarea></div>
+              <label for="Apariencia">Apariencia:</label>
+              <div><textarea name="" id="Apariencia"></textarea></div>
+              <label for="">Foto de su Mascota </label>
+              <div><input type="file" id="fotoMascotaAdopcion" accept="image/*"></div>
+            
+            </div>
+              
+            
+
+            <div id="botonesAgregar">
+              <button type="submit" class="BotonAgregar">Guardar</button>
+              </div>
            </form>
+           
     </dialog>
     <!-- Modal Ver Mascota en ADOPCION  -->
     <dialog class="modal" id="mainModal" style=" background-color: #4f6f52; padding: 20px;">
     
   <span id="close-btn-mascota" onclick="document.getElementById('mainModal').close()">X</span>
-  <h1 style="text-align: center; margin: 0; background-color:#4f6f52;">Nueva Mascota</h1>
+  <h1 style="text-align: center; margin: 0; background-color:#4f6f52;">Mascota en adopción</h1>
   <div id="modal-body">
       <div class="contenedor-mascota-1">
 
@@ -92,33 +100,34 @@
             <h2>Agregar Mascota Perdida</h2>
             
             <form id="addDataFormPerdido">
-              
-              <label for="nombre">Nombre:</label>
-              <div><input type="text" id="nombrePerdido" required></div>
+              <div id="izquierda">
+                <label for="nombre">Nombre:</label>
+                <div><input type="text" id="nombrePerdido" required></div>
 
-              <label for="ProvinciaPerdido">Provincia:</label>
-              <div><input type="text" id="ProvinciaPerdido" required></div>
+                <label for="ProvinciaPerdido">Provincia:</label>
+                <div><input type="text" id="ProvinciaPerdido" required></div>
 
-              <label for="LocalidadPerdido">Localidad:</label>
-              <div><input type="text" id="LocalidadPerdido" required></div>
+                <label for="LocalidadPerdido">Localidad:</label>
+                <div><input type="text" id="LocalidadPerdido" required></div>
 
-              <label for="BarrioPerdido">Barrio en el que se perdio:</label>
-              <div><input type="text" id="BarrioPerdido" required></div>
+                <label for="BarrioPerdido">Barrio en el que se perdio:</label>
+                <div><input type="text" id="BarrioPerdido" required></div>
 
+
+                <label for="ContactoPerdido">Contacto:</label>
+                <div><input type="text" id="ContactoPerdido" required></div>
+              </div>
+              <div id="derecha">
               <label for="FechaPerdido">Fecha en la que se perdio:</label>
               <div><input type="date" id="FechaPerdido" required></div>
 
-              <label for="ContactoPerdido">Contacto:</label>
-              <div><input type="text" id="ContactoPerdido" required></div>
-
               <label for="DatosGeneralesPerdido">Datos Generales:</label>
-              <div></div><textarea name="" id="DatosGeneralesPerdido"></textarea></div>
-
+              <div><textarea name="" id="DatosGeneralesPerdido"></textarea></div>
               <div><label for="AparienciaPerdido">Apariencia:</label></div>
-              <div></div><textarea name="" id="AparienciaPerdido"></textarea></div>
+              <div><textarea name="" id="AparienciaPerdido"></textarea></div>
               <div><label for="">Foto de su Mascota </label></div>
               <div><input type="file" id="fotoMascotaPerdido" accept="image/*"></div>
-              
+            </div>
                           <div id="botonesAgregar">
             <button type="submit" class="BotonAgregar">Guardar</button>
             </div>

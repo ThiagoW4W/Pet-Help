@@ -66,15 +66,18 @@ document.getElementById('addDataForm').addEventListener('submit', async (e) => {
 
 
 
-function crearBotonMascota(docId, nombre,DatosGenerales) {
-   
-    
+async function crearBotonMascota(docId, nombre,DatosGenerales) {
+
     const divContainer = document.createElement('div');
     divContainer.classList.add('tarjeta');
     const button = document.createElement('button');
     button.classList.add('boton-mascota-nueva');  // Agregar clase al botón
     document.getElementById('tarjetaMascota').appendChild(divContainer);
     divContainer.appendChild(button);
+
+    const imagenDelBoton = document.createElement('img');  // Crea el  img
+    imagenDelBoton.setAttribute('data-id', docId);  // Usar un atributo único como 'data-id'
+    button.appendChild(imagenDelBoton);  // Agrega la imagen al botón
 
     const titulo = document.createElement('h2');
     titulo.textContent = nombre;
@@ -84,6 +87,24 @@ function crearBotonMascota(docId, nombre,DatosGenerales) {
     subtitulo.textContent = DatosGenerales;
     divContainer.appendChild(subtitulo);
 
+
+    //Poner la imagen de la BD en imagenDelBoton
+    const docRef = doc(db, 'Mascotas', docId);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        const data = docSnap.data();
+        console.log("existe");
+        
+        // Aquí, en lugar de `document.getElementById('imagenDelBoton')`, usas `data-id`
+        const imagenElemento = button.querySelector('[data-id="' + docId + '"]');
+        
+        if (imagenElemento) {
+            imagenElemento.src = data.fotoAdopcion || '';  // Agregar la imagen al botón
+        }
+
+        console.log(data.fotoAdopcion);
+    }
     button.onclick = async () => {
         // Mostrar el modal con los datos del documento
         await ObtenerYrellenar(docId);
@@ -108,6 +129,7 @@ async function ObtenerYrellenar(docId) {
 
             // Mostrar la imagen si existe
             document.getElementById('imagenMascotaAdopcion').src = data.fotoAdopcion || ''; // Agregar la imagen al elemento `imagenMascotaAdopcion`
+           
             
             const modal = document.getElementById("mainModal");
             if (modal) {
@@ -196,7 +218,7 @@ function convertirABase64(file) {
     });
 }
 
-function crearBotonMascotaPerdido(docId, nombrePerdido,DatosGeneralesPerdido) {
+async function crearBotonMascotaPerdido(docId, nombrePerdido,DatosGeneralesPerdido) {
     const divContainer = document.createElement('div'); //Crea un div
     divContainer.classList.add('tarjeta'); //Le pone le clase tarjeta
     const button = document.createElement('button'); //Crea un botom
@@ -204,6 +226,10 @@ function crearBotonMascotaPerdido(docId, nombrePerdido,DatosGeneralesPerdido) {
     document.getElementById('tarjetaMascotaPerdida').appendChild(divContainer); // Agregar el div a la seccion de perdidos
     divContainer.appendChild(button);// Agregar botón dentro del div
     
+    const imagenDelBoton = document.createElement('img');  // Crea el  img
+    imagenDelBoton.setAttribute('data-id-Perdidas', docId);  // Usar un atributo único como 'data-id'
+    button.appendChild(imagenDelBoton);  // Agrega la imagen al botón
+
     const titulo = document.createElement('h2');
     titulo.textContent = nombrePerdido;
     divContainer.appendChild(titulo); 
@@ -212,13 +238,29 @@ function crearBotonMascotaPerdido(docId, nombrePerdido,DatosGeneralesPerdido) {
     subtitulo.textContent = DatosGeneralesPerdido;
     divContainer.appendChild(subtitulo);
 
+
+    //Poner la imagen de la BD en imagenDelBoton
+    const docRef = doc(db, 'MascotasPerdidas', docId);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        const data = docSnap.data();
+        console.log("existe");
+        
+        // Aquí, en lugar de `document.getElementById('imagenDelBoton')`, usas `data-id`
+        const imagenElemento = button.querySelector('[data-id-Perdidas="' + docId + '"]');
+        
+        if (imagenElemento) {
+            imagenElemento.src = data.fotoPerdido || '';  // Agregar la imagen al botón
+        }
+
+        console.log(data.fotoPerdido);
+    }
     button.onclick = async () => {
         // Mostrar el modal con los datos del documento
         await ObtenerYrellenarPerdido(docId);
     };
-
-    
-} 
+}
 
 async function ObtenerYrellenarPerdido(docId) {
     try {
@@ -269,5 +311,6 @@ async function refrescarMascotasPerdidas() {
         crearBotonMascotaPerdido(doc.id, data.nombrePerdido,data.DatosGeneralesPerdido, data.ProvinciaPerdido, data.LocalidadPerdido, data.BarrioPerdido, data.AparienciaPerdido, data.FechaPerdido);
     });
 }
+
 refrescarMascotasPerdidas();
 loadData();

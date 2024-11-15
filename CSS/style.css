@@ -133,9 +133,21 @@ footer{
 }
 /*FIN Boton de volver */
 .boton-mascota-nueva{
+  background-color: #ffffff00;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid rgb(204, 201, 201);
+  border-radius: 20px;
   width: 220px;
   height: 220px;
+  object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor */
 
+}
+.boton-mascota-nueva img{
+  transition: 
+  transform 0.2s ease-in-out, 
+  filter 0.2s ease;
+}
+.boton-mascota-nueva img:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(8px 8px 4px black);
 }
