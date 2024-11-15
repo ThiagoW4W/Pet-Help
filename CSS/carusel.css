@@ -25,11 +25,12 @@
   }
       
   .texto {
+    z-index: 1;
     filter: drop-shadow(8px 8px 4px black);
     position: absolute;
     text-align: center;
     top: 35%;
-    padding: 0 50vh 0 50vh;
+    padding: 0 50vh 50vh 50vh;
     color: white;
     font-weight: bold;
   }    

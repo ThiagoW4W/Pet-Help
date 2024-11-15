@@ -142,7 +142,7 @@
   margin: 0 auto;
   margin-top: 100px;
 }
-#modal-body-paseador {
+#modal-body-Cuidador{
   height: 600px;
   width: 900px;
   margin: 0 auto;
@@ -279,8 +279,8 @@
   object-fit: cover; /* Puedes cambiar a 'contain' si prefieres que no se recorte */
 }
 /* FIN MODAL MOSTRAR MASCOTA EN ADOPCION */
-/*  MOSTRAR PASEADOR */
-#verPaseador {
+/*  MOSTRAR paseador*/
+#verPaseador{
   
   margin: 0 auto;
   margin-top: 20px;
@@ -289,7 +289,7 @@
 
 
 
-#modal-body-paseador {
+#modal-body-paseador{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -328,7 +328,7 @@ border-radius: 1em;
   text-align: center;
   justify-content:center;
   align-content:center;
-}.contendor-2-paseador ,p,h2{
+}.contendor-2-paseador,p,h2{
   margin: 10px;
 }
 #contactos-popup-paseador{
@@ -403,4 +403,130 @@ border-radius: 1em;
   width: 100%;
   height: 10em;
 }
-/* FIN MOSTRAR PASEADOR */
+/* FIN MOSTRAR paseador*/
+/*  MOSTRAR Cuidador*/
+#verCuidador{
+  
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+
+#modal-body-Cuidador{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+
+}
+#marcoPerfil{
+  display: flex;
+  flex-direction: column;
+}
+
+.contendor-1-Cuidador{
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: 15em;
+  height: 20em;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  text-align: center;
+  justify-content:center;
+  align-content:center;
+}
+.contendor-1-Cuidador,img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.contendor-2-Cuidador{
+border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: 10em;
+  height: 20em;
+border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  text-align: center;
+  justify-content:center;
+  align-content:center;
+}.contendor-2-Cuidador,p,h2{
+  margin: 10px;
+}
+#contactos-popup-Cuidador{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contendor-3-Cuidador{
+  text-align: center;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: 13em;
+  height: 5em;
+  backdrop-filter: blur(5px);
+ border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+}
+.contendor-4-Cuidador{
+border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: 13em;
+  height: 5em;
+ border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  text-align: center;
+  justify-content:center;
+  align-content:center;
+
+}
+.contendor-5-Cuidador{
+border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: 13em;
+  height: 5em;
+ border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.5);  
+  text-align: center;
+  justify-content:center;
+  align-content:center;
+}
+#datos-Cuidador{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.contendor-6-Cuidador{
+
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top:  2px solid rgb(255, 255, 255);
+  border-right:  2px solid rgb(255, 255, 255);
+ text-align: center;
+  width: 100%;
+  height: 10em;
+  
+}
+
+.contendor-7-Cuidador{
+
+  text-align: center;
+  border-bottom:  2px solid rgb(255, 255, 255);
+  border-top:  2px solid rgb(255, 255, 255);
+  border-right:  2px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 10em;
+}
+.contendor-8-Cuidador{
+  
+  text-align: center;
+  border-bottom:  2px solid rgb(255, 255, 255);
+  border-top:  2px solid rgb(255, 255, 255);
+
+  width: 100%;
+  height: 10em;
+}
+/* FIN MOSTRAR Cuidador*/

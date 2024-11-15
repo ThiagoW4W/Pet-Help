@@ -75,8 +75,8 @@
             <dialog id="addModalPaseador">
                 <span id="close-btn-mascota" onclick="document.getElementById('addModalPaseador').close()">X</span>
                     <h2>Agregar Paseador</h2>
-                    <form id="addDataFormPerdido">
-                        
+                    <form id="addDataFormPaseador">
+                        <div id="Izquierda">
                         <label for="nombre">Nombre:</label>
                         <div><input type="text" id="nombrePaseador" required></div>
                         <label for="provinciaPaseador">Provincia:</label>
@@ -89,32 +89,131 @@
                         <div><input type="text" id="BarrioPaseador" required></div>
 
                         <label for="DisponibildadPaseador">Disponibildad:</label>
-                        <div><input type="date" id="DisponibildadPaseador" required></div>
+                        <div><input type="text" id="DisponibildadPaseador" required></div>
 
                         <label for="ContactoPaseador">Contacto:</label>
                         <div><input type="text" id="ContactoPaseador" required></div>
 
                         <label for="CapacidadMAXPaseador">Capacidad Maxima de mascotas:</label>
                         <div></div><input name="" id="CapacidadMAXPaseador"></input></div>
-
+                    </div>
+                    <div id="Derecha">
                         <div><label for="OrientacionPaseador">Orientacion:</label></div>
-                        <div></div><input name="" id="OrientacionPaseador"></input></div>
+                        <div><input name="" id="OrientacionPaseador"></input></div>
 
                         <div><label for="DescpcionPaseador">Descripcion:</label></div>
-                        <div></div><textarea name="" id="DescpcionPaseador"></textarea></div>
+                        <div><textarea name="" id="DescpcionPaseador"></textarea></div>
 
                         <div><label for="TipoAnimalPaseador">Tipo de Animal:</label></div>
-                        <div></div><textarea name="" id="TipoAnimalPaseador"></textarea></div>
+                        <div><textarea name="" id="TipoAnimalPaseador"></textarea></div>
 
                         <div><label for="">Foto del paseador </label></div>
                         <div><input type="file" id="fotoPaseador" accept="image/*"></div>
-                        
+                    </div>
                                     <div id="botonesAgregar">
                     <button type="submit" class="BotonAgregar">Guardar</button>
                     </div>
                     </div>
                     </form>
                 </dialog>
+
+                <dialog class="modal" id="verCuidador" style=" background-color: #4f6f52; padding: 20px;">
+    
+                    <span id="close-btn-mascota" onclick="document.getElementById('verCuidador').close()">X</span>
+                                <h2 style="text-align: center; margin: 0;">Cuidador</h2>
+                                <div id="modal-body-Cuidador">
+                                    <div id="marcoPerfil">
+                                        <div class="contendor-1-Cuidador">
+                                            <h2>Nombre Cuidador</h2>
+                                            <p><span id="remplazarnombreCuidador"></span></p>
+                                            <img src="/Imagenes/img-tarjeta-Cuidador.jpg" id="remplazarfotoCuidador" alt="Imagen del Cuidador">
+                                        </div>
+                                    </div>
+                                    <div class="contendor-2-Cuidador"> 
+                                        <h2>Provincia</h2>
+                                        <p><span id="remplazarProvinciaCuidador"></span></p>
+                                        <h2>Localidad</h2>
+                                        <p><span id="remplazarLocalidadCuidador"></span></p>
+                                        <h2>Barrio</h2>
+                                        <p><span id="remplazarBarrioCuidador"></span></p>
+                                    </div>
+                                    <div id="contactos-popup-Cuidador">
+                                        <div class="contendor-3-Cuidador">
+                                            <h2>Disponibilidad</h2>
+                                            <p><span id="remplazarDisponibildadCuidador"></span></p>
+                                        </div>
+                                        <div class="contendor-4-Cuidador">
+                                            <h2>Contacto</h2>
+                                                <span id="remplazarContactoCuidador"></span>
+                                        </div>
+                                        <div class="contendor-5-Cuidador">
+                                            <h2>Capacidad</h2>
+                                            <p><span id="remplazarCapacidadMAXCuidador"></span></p>
+                                        </div>
+                                    </div>
+                                    <div id="datos-Cuidador">
+                                        <div class="contendor-6-Cuidador">
+                                            <h2>Orientacion</h2>
+                                            <p><span id="remplazarOrientacionCuidador"></span></p>
+                                        </div>
+                                        <div class="contendor-7-Cuidador">
+                                            <h2>Descpcion</h2>
+                                            <p><span id="remplazarDescpcionCuidador"></span></p>
+                                        </div>
+                                        <div class="contendor-8-Cuidador">
+                                            <h2>Tipos de animal</h2>
+                                            <p><span id="remplazarTipoAnimalCuidador"></span></p>
+                                        </div>
+                                    </div>
+                                
+                            </div>      
+                        </dialog>
+
+                        <dialog id="addModalCuidador">
+                            <span id="close-btn-mascota" onclick="document.getElementById('addModalCuidador').close()">X</span>
+                                <h2>Agregar Cuidador</h2>
+                                <form id="addDataFormCuidador">
+                                    <div id="Izquierda">
+                                    
+                                    <label for="nombre">Nombre:</label>
+                                    <div><input type="text" id="nombreCuidador" required></div>
+                                    <label for="provinciaCuidador">Provincia:</label>
+                                    <div><input type="text" id="provinciaCuidador" required></div>
+            
+                                    <label for="LocalidadCuidador">Localidad:</label>
+                                    <div><input type="text" id="LocalidadCuidador" required></div>
+            
+                                    <label for="BarrioCuidador">Barrio:</label>
+                                    <div><input type="text" id="BarrioCuidador" required></div>
+            
+                                    <label for="DisponibildadCuidador">Disponibildad:</label>
+                                    <div><input type="text" id="DisponibildadCuidador" required></div>
+            
+                                    <label for="ContactoCuidador">Contacto:</label>
+                                    <div><input type="text" id="ContactoCuidador" required></div>
+            
+                                    <label for="CapacidadMAXCuidador">Capacidad Maxima de mascotas:</label>
+                                    <div></div><input name="" id="CapacidadMAXCuidador"></input></div>
+                                </div>
+                                <div id="Derecha">
+                                    <div><label for="OrientacionCuidador">Orientacion:</label></div>
+                                    <div><input name="" id="OrientacionCuidador"></input></div>
+            
+                                    <div><label for="DescpcionCuidador">Descripcion:</label></div>
+                                    <div><textarea name="" id="DescpcionCuidador"></textarea></div>
+            
+                                    <div><label for="TipoAnimalCuidador">Tipo de Animal:</label></div>
+                                    <div><textarea name="" id="TipoAnimalCuidador"></textarea></div>
+        
+                                    <div><label for="">Foto del Cuidador </label></div>
+                                    <div><input type="file" id="fotoCuidador" accept="image/*"></div>
+                                </div>
+                                                <div id="botonesAgregar">
+                                <button type="submit" class="BotonAgregar">Guardar</button>
+                                </div>
+                                </div>
+                                </form>
+                            </dialog>
     <div id="banner"> <div class="texto">
         <h2>Servicios para Mascotas</h2>
         <p>No solo ayudamos a encontrar hogares para perros, sino que también ofrecemos una variedad de servicios para asegurar su bienestar. Contamos con cuidadores expertos, paseadores confiables y lugares de tránsito seguros. Nuestro objetivo es brindar apoyo integral para que tu mascota siempre esté feliz y bien cuidada.
@@ -126,10 +225,8 @@
         <!--Paseadores-->
 
         <h1 id="paseadores" class="title">Paseadores</h1>
-        <select id="filtro" name="filtro" class="filtro">
-            <option value="0">Filtro</option>
-        </select>
-        <div class="tarjetas" id="tarjeta">
+
+        <div class="tarjetas" id="tarjetaPaseador">
            
             <div class="tarjeta"><h2>Agregar Paseador</h2><button class="agregarBoton" onclick="document.getElementById('addModalPaseador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
         
@@ -138,11 +235,10 @@
         <!--Cuiadadores-->
 
         <h1 id="cuidadores" class="title">Cuiadadores</h1>
-        <select name="filtro" class="filtro">
-            <option value="0">Filtro</option>
-        </select>
-        <div class="tarjetas">
-          
+
+        <div class="tarjetas" id="tarjetaCuidador" >
+            <div class="tarjeta"><h2>Agregar Cuidador</h2><button class="agregarBoton" onclick="document.getElementById('addModalCuidador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
+
         </div>
 
    </section>

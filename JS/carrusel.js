@@ -1,42 +1,20 @@
 var actual = 0;
-function puntos(n){
-  var ptn = document.getElementsByClassName("punto");
-  for(i = 0; i<ptn.length; i++){
-    if(ptn[i].className.includes("activo")){
-      ptn[i].className = ptn[i].className.replace("activo", "");
-      break;
-    }
-  }
-  ptn[n].className += " activo";
-}
-function mostrar(n){
-  var imagenes = document.getElementsByClassName("imagen");
-  for(i = 0; i< imagenes.length; i++){
-    if(imagenes[i].className.includes("actual")){
-      imagenes[i].className = imagenes[i].className.replace("actual", "");
-      break;
-    }
-  }
-  actual = n;
-  imagenes[n].className += " actual";
-  puntos(n);
-}
 
-function siguiente(){
+function siguiente() {
+  var imagenes = document.getElementsByClassName("imagen");
+
+  // Remover la clase "actual" de la imagen visible
+  imagenes[actual].classList.remove("actual");
+
+  // Incrementar el índice de la imagen
   actual++;
-  if(actual > 3){
-    actual = 0;
+  if (actual >= imagenes.length) {
+    actual = 0; // Volver a la primera imagen si llegamos al final
   }
-  mostrar(actual);
-}
-function anterior(){
-  actual--;
-  if(actual < 0){
-    actual = 3;
-  }
-  mostrar(actual);
+
+  // Agregar la clase "actual" a la nueva imagen
+  imagenes[actual].classList.add("actual");
 }
 
 var velocidad = 5000;
-var play = setInterval("siguiente()", velocidad);
-//cambiar por un hover para que cuando se ponga el cursor encima se pause
+var play = setInterval(siguiente, velocidad);
