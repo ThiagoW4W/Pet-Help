@@ -41,28 +41,8 @@ select,option{
     font-weight: 700;
     border-radius: 12px;
 }
-input[type='submit']{
-    color: #F5EFE6;
-    margin-top: 2vh;
-    background-color: #fffafa00;
-    padding: 0;
-    width: 50%;
-    border: 1px solid;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 
-    
-    box-shadow .5s, /* Nombre y tiempo de la animación */
-    transform .2s ease-in-out,
-    background-color 100ms;
-}
-input[type='submit']:hover{
-    
-    cursor: pointer;
-    box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
-    transform: scale(1.1);
-    
-  }
+
+  
   h1{
     font-family: "League Spartan", sans-serif;
     font-size: 70px;
@@ -83,7 +63,28 @@ a:hover{
 }
 /* Class & Divs */
 
-
+#iniciarSesion{
+    color: #F5EFE6;
+    margin-top: 2vh;
+    background-color: #fffafa00;
+    padding: 20;
+    width: 50%;
+    
+    border: 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 
+    
+    box-shadow .5s, /* Nombre y tiempo de la animación */
+    transform .2s ease-in-out,
+    background-color 100ms;
+}
+#iniciarSesion:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px #2222221a; /* Se le aplica los valores q deseamos alterar */
+    transform: scale(1.1);
+    
+}
 #error{
     margin: 0 10px 0 10px;
     background-color: #03000c49;

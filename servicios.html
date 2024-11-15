@@ -7,13 +7,114 @@
     <link rel="stylesheet" href="./CSS/servicios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/Modales-Form.css">
+    <link rel="stylesheet" href="CSS/Modales-Mostrar.css">
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="./JS/script.js" ></script>
     <script defer src="./JS/fetchs/navbar.js"></script>
+    
+    <script defer type="module" src="JS/publicarServicios.js"></script>
+
+   
 </head>
 <body>
     <div id="Navbar"></div>
+    
+    <dialog class="modal" id="verPaseador" style=" background-color: #4f6f52; padding: 20px;">
+    
+        <span id="close-btn-mascota" onclick="document.getElementById('verPaseador').close()">X</span>
+                    <h2 style="text-align: center; margin: 0;">Paseador</h2>
+                    <div id="modal-body">
+                        <div id="marcoPerfil">
+                            <div class="contendor-1">
+                                <h2>Nombre Paseador</h2>
+                                <p><span id="remplazarnombrePaseador"></span></p>
+                                <img src="/Imagenes/img-tarjeta-paseador.jpg" id="remplazarfotoPaseador" alt="Imagen del Paseador">
+                            </div>
+                        </div>
+                        <div class="contendor-2"> 
+                            <h2>Provincia</h2>
+                            <p><span id="remplazarProvinciaPaseador"></span></p>
+                            <h2>Localidad</h2>
+                            <p><span id="remplazarLocalidadPaseador"></span></p>
+                            <h2>Barrio</h2>
+                            <p><span id="remplazarBarrioPaseador"></span></p>
+                        </div>
+                        <div id="contactos-popup">
+                            <div class="contendor-3">
+                                <h2>Disponibilidad</h2>
+                                <p><span id="remplazarDisponibildadPaseador"></span></p>
+                            </div>
+                            <div class="contendor-4">
+                                <h2>Contacto</h2>
+                                    <span id="remplazarContactoPaseador"></span>
+                            </div>
+                            <div class="contendor-5">
+                                <h2>Capacidad</h2>
+                                <p><span id="remplazarCapacidadMAXPaseador"></span></p>
+                            </div>
+                        </div>
+                        <div id="datos">
+                            <div class="contendor-6">
+                                <h2>Orientacion</h2>
+                                <p><span id="remplazarOrientacionPaseador"></span></p>
+                            </div>
+                            <div class="contendor-7">
+                                <h2>Descpcion</h2>
+                                <p><span id="remplazarDescpcionPaseador"></span></p>
+                            </div>
+                            <div class="contendor-8">
+                                <h2>Tipos de animal</h2>
+                                <p><span id="remplazarTipoAnimalPaseador"></span></p>
+                            </div>
+                        </div>
+                    
+                </div>      
+            </dialog>
+            <dialog id="addModalPaseador">
+                <span id="close-btn-mascota" onclick="document.getElementById('addModalPaseador').close()">X</span>
+                    <h2>Agregar Paseador</h2>
+                    <form id="addDataFormPerdido">
+                        
+                        <label for="nombre">Nombre:</label>
+                        <div><input type="text" id="nombrePaseador" required></div>
+                        <label for="provinciaPaseador">Provincia:</label>
+                        <div><input type="text" id="provinciaPaseador" required></div>
 
+                        <label for="LocalidadPaseador">Localidad:</label>
+                        <div><input type="text" id="LocalidadPaseador" required></div>
+
+                        <label for="BarrioPaseador">Barrio:</label>
+                        <div><input type="text" id="BarrioPaseador" required></div>
+
+                        <label for="DisponibildadPaseador">Disponibildad:</label>
+                        <div><input type="date" id="DisponibildadPaseador" required></div>
+
+                        <label for="ContactoPaseador">Contacto:</label>
+                        <div><input type="text" id="ContactoPaseador" required></div>
+
+                        <label for="CapacidadMAXPaseador">Capacidad Maxima de mascotas:</label>
+                        <div></div><input name="" id="CapacidadMAXPaseador"></input></div>
+
+                        <div><label for="OrientacionPaseador">Orientacion:</label></div>
+                        <div></div><input name="" id="OrientacionPaseador"></input></div>
+
+                        <div><label for="DescpcionPaseador">Descripcion:</label></div>
+                        <div></div><textarea name="" id="DescpcionPaseador"></textarea></div>
+
+                        <div><label for="TipoAnimalPaseador">Tipo de Animal:</label></div>
+                        <div></div><textarea name="" id="TipoAnimalPaseador"></textarea></div>
+
+                        <div><label for="">Foto del paseador </label></div>
+                        <div><input type="file" id="fotoPaseador" accept="image/*"></div>
+                        
+                                    <div id="botonesAgregar">
+                    <button type="submit" class="BotonAgregar">Guardar</button>
+                    </div>
+                    </div>
+                    </form>
+                </dialog>
     <div id="banner"> <div class="texto">
         <h2>Servicios para Mascotas</h2>
         <p>No solo ayudamos a encontrar hogares para perros, sino que también ofrecemos una variedad de servicios para asegurar su bienestar. Contamos con cuidadores expertos, paseadores confiables y lugares de tránsito seguros. Nuestro objetivo es brindar apoyo integral para que tu mascota siempre esté feliz y bien cuidada.
@@ -28,11 +129,10 @@
         <select id="filtro" name="filtro" class="filtro">
             <option value="0">Filtro</option>
         </select>
-        <div class="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/img-tarjeta-paseador.jpg" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+        <div class="tarjetas" id="tarjeta">
+           
+            <div class="tarjeta"><h2>Agregar Paseador</h2><button class="agregarBoton" onclick="document.getElementById('addModalPaseador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
+        
         </div>
 
         <!--Cuiadadores-->
@@ -42,14 +142,11 @@
             <option value="0">Filtro</option>
         </select>
         <div class="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
-            <div class="tarjeta"><h1>Nombre</h1> <img class="img-tarjeta" src="./Imagenes/" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</div>
+          
         </div>
 
    </section>
-    <button id="volverInicio" onclick="volverInicio()">↑</button>
-    
+   <button id="volverInicio" onclick="volverInicio()">↑</button>
+    </script>
 </body>
 </html>

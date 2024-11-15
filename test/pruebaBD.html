@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar y Ver Datos de Firebase</title>
+</head>
+<body>
+
+    <h1>Agregar y Ver Datos de Mascotas</h1>
+
+    <!-- Botón para abrir el modal de agregar datos -->
+    <button onclick="document.getElementById('addModal').showModal()">Agregar Nueva Mascota</button>
+
+    <!-- Modal para agregar datos -->
+    <dialog id="addModal">
+        <form id="addDataForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+            <button type="submit">Guardar</button>
+            <button type="button" onclick="document.getElementById('addModal').close()">Cancelar</button>
+        </form>
+    </dialog>
+
+    <!-- Contenedor para los botones generados -->
+    <div id="dataButtonsContainer"></div>
+
+    <!-- Modal para mostrar datos -->
+    <dialog id="displayModal">
+        <h1>Detalles de la Mascota</h1>
+        <p><strong>Nombre:</strong> <span id="detailNombre"></span></p>
+        <p><strong>Edad:</strong> <span id="detailEdad"></span></p>
+        <!-- Agregar más campos si es necesario -->
+        <button onclick="document.getElementById('displayModal').close()">Cerrar</button>
+    </dialog>
+
+    <!-- Firebase JS SDK -->
+    <script type="module">
+        // Importar los módulos de Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+        // Configuración de Firebase (la que me proporcionaste)
+        const firebaseConfig = {
+            apiKey: "AIzaSyCRB7vXByfKfEcPq4By_yZxpAuBafg2jII",
+            authDomain: "pet-help-59290.firebaseapp.com",
+            projectId: "pet-help-59290",
+            storageBucket: "pet-help-59290.firebasestorage.app",
+            messagingSenderId: "571022010836",
+            appId: "1:571022010836:web:3c0cd01f953a00eb97ce41"
+        };
+
+        // Inicializar Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Función para agregar datos a Firestore y crear un botón
+        document.getElementById('addDataForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const edad = document.getElementById('edad').value;
+
+            try {
+                // Agregar el documento a la colección 'mascotas'
+                const docRef = await addDoc(collection(db, 'mascotas'), { nombre, edad });
+                console.log("Documento añadido con ID: ", docRef.id);
+                
+                // Crear un botón para ver los datos de este documento
+                createDataButton(docRef.id, nombre);
+
+                // Cerrar el modal
+                document.getElementById('addModal').close();
+                document.getElementById('addDataForm').reset();
+            } catch (error) {
+                console.error("Error al añadir documento: ", error);
+            }
+        });
+
+        // Función para crear un botón dinámico en el DOM
+        function createDataButton(docId, nombre) {
+            const button = document.createElement('button');
+            button.style.backgroundColor = '#4CAF50';  // Fondo verde
+                button.style.color = 'white';  // Texto blanco
+                button.style.border = 'none';  // Sin borde
+                button.style.padding = '10px 20px';  // Relleno
+                button.style.textAlign = 'center';  // Alineación centrada
+                button.style.cursor = 'pointer';  // Cursor como puntero
+                button.style.borderRadius = '5px';  // Bordes redondeados
+            button.textContent = `Ver: ${nombre}`;
+            button.onclick = async () => {
+                // Mostrar el modal con los datos del documento
+                await ObtenerYrellenar(docId);
+            };
+            
+            divContainer.appendChild(button);
+        }
+
+        // Función para mostrar los datos en el modal
+        async function ObtenerYrellenar(docId) {
+            try {
+                const docRef = doc(db, 'mascotas', docId);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    // Mostrar los datos dentro de las etiquetas <span> dentro del modal
+                    document.getElementById('detailNombre').textContent = docSnap.data().nombre || 'No disponible';
+                    document.getElementById('detailEdad').textContent = docSnap.data().edad || 'No disponible';
+
+                    // Mostrar el modal
+                    document.getElementById('displayModal').showModal();
+                } else {
+                    console.log("No se encontró el documento.");
+                }
+            } catch (error) {
+                console.error("Error al obtener documento: ", error);
+            }
+        }
+
+        // Cargar y mostrar los datos existentes cuando se carga la página
+        async function loadData() {
+            const querySnapshot = await getDocs(collection(db, 'mascotas'));
+            querySnapshot.forEach((doc) => {
+                const data = doc.data();
+                createDataButton(doc.id, data.nombre);
+            });
+        }
+
+        // Llamar a la función para cargar datos al cargar la página
+        loadData();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* MODAL MOSTRAR MASCOTA EN ADOPCION */
+#mainModal{
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+
+  
+  #close-btn-mascota{
+    font-size: 20px;
+    margin: 0;
+    cursor: pointer;
+  }
+  .contenedor-mascota-1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+    margin: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    background-position: center;
+    border-radius: 20px;
+    
+    text-align: center;
+    justify-content:center;
+    align-content:center;
+  }
+  
+  
+  .contenedor-mascota-2 {
+    text-align: center;
+    
+    grid-row: 1/2;
+    grid-column: 2/3;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+    align-content:center;
+  }
+  
+  .contenedor-mascota-3 {
+    text-align: center;
+    margin: 20px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+   
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+  
+    align-content:center;
+  }
+  
+  .contenedor-mascota-4 {
+    text-align: center;
+    width: 400px;
+    margin: 20px;
+    grid-row: 2/3;
+    grid-column: 2/4;
+
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+   
+    
+
+  }
+
+  .contenedor-mascota-4 span{
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .contenedor-mascota-5 {
+    padding: 17.5px;
+  
+    
+    grid-row: 3/4;
+    grid-column: 2/3;
+    backdrop-filter: blur(5px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);  
+    text-align: center;
+    width: 170px;
+    margin-right: -40px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+  }
+  .contenedor-mascota-6 {
+
+    padding: 17.5px;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    width: 160px;
+    justify-self: center; /* Alinea horizontalmente al centro */
+  }
+  .contenedor-mascota-7{
+    padding: 2px;
+    font-size: 30px;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);  
+    border-radius: 20px;
+    text-align: center;
+  }
+  .titulo{
+   
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .contenido-p{
+  
+    font-size: 25px;
+    margin-top: 5px;
+  }
+/* FIN MODAL MOSTRAR MASCOTA EN ADOPCION */
+/* MODAL MOSTRAR MASCOTA PERDIDA */
+#VerMascotaPerdido{
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+
+
+#close-btn-mascotaPerdida{
+  font-size: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+.contenedor-mascotaPerdida-1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+
+  margin: 20px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);  
+  background-position: center;
+  border-radius: 20px;
+  
+  text-align: center;
+  justify-content:center;
+  align-content:center;
+}
+
+
+.contenedor-mascotaPerdida-2 {
+  text-align: center;
+  
+  grid-row: 1/2;
+  grid-column: 2/3;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);  
+  border-radius: 20px;
+  width: 80%;
+  height: 80%;
+  margin: 10px;
+  justify-self: center; /* Alinea horizontalmente al centro */
+  align-content:center;
+}
+
+.contenedor-mascotaPerdida-3 {
+  text-align: center;
+  margin: 20px;
+  grid-row: 1/2;
+  grid-column: 3/4;
+ 
+  background-color: rgba(255, 255, 255, 0.5);  
+  border-radius: 20px;
+  width: 80%;
+  height: 80%;
+  margin: 10px;
+  justify-self: center; /* Alinea horizontalmente al centro */
+
+  align-content:center;
+}
+
+.contenedor-mascotaPerdida-4 {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin: 20px;
+  grid-row: 2/3;
+  grid-column: 2/4;
+
+  background-color: rgba(255, 255, 255, 0.5);  
+  border-radius: 20px;
+  
+
+}
+.contenedor-mascotaPerdida-4-Derecha{
+  display: flex;
+  flex-direction: column;
+  
+}
+.contenedor-mascotaPerdida-4-Izquierda{
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+
+}
+.contenedor-mascotaPerdida-4 span{
+  font-size: 15px;
+
+}
+.contenedor-mascotaPerdida-5 {
+  padding: 7.5px;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  backdrop-filter: blur(5px);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);  
+  text-align: center;
+  width: 170px;
+  margin-right: -40px;
+  justify-self: center; /* Alinea horizontalmente al centro */
+}
+.contenedor-mascotaPerdida-6 {
+  
+  margin-left: -40px;
+  padding:  7.5px;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  grid-row: 3/4;
+  grid-column: 3/4;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: 160px;
+  justify-self: center; /* Alinea horizontalmente al centro */
+}
+.contenedor-mascotaPerdida-7{
+  padding: 2px;
+  font-size: 30px;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);  
+  border-radius: 20px;
+  text-align: center;
+}
+.img-tarjeta-emergente{
+  width: 100PX;
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: 100%; /* Ajusta la imagen al alto del contenedor */
+  object-fit: cover; /* Puedes cambiar a 'contain' si prefieres que no se recorte */
+}
+/* FIN MODAL MOSTRAR MASCOTA EN ADOPCION */

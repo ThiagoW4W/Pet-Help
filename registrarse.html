@@ -5,50 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="./CSS/registrarse.css">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&family=Nunito:wght@200..1000&family=Poppins:wght@100..400&family=Roboto:wght@100..900&family=Geologica:wght@100..900&family=Kanit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script defer type="module" src="JS/registro.js"></script>
 </head>
 <body>
     <section id="contenedorForm">
-        <form action="index.html" id="formInicio">
+        <form id="formInicio">
             <p id="error"></p>
             <h1>Registro</h1>
             <div id="contenedorFlex">
                 <div class="izquierda">
                     <div class="itemform">
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" required> 
+                        <input type="text" name="nom" id="nombre" required> 
                     </div>
                     <div class="itemform">
                         <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" required>
+                        <input type="text" name="apell" id="apellido" required>
                     </div>
                     <div class="itemform">
-                        <label for="contrasena">Crear Contraseña:</label>
-                        <input type="text" name="email" id="contrasena" value="" required>
+                        <label for="contraReg">Crear Contraseña:</label>
+                        <input id="contraReg" type="password" name="contrasena" required>
                     </div>
                 </div>
                 <div class="derecha">
                     <div class="itemform">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="nombre@mail.com" required>
+                        <label for="emailReg">Email</label>
+                        <input id="emailReg" type="text" name="eml" placeholder="nombre@mail.com" required>
                     </div>
                     <div class="itemform">
-                        <label for="tipoUsuario">Tipo de usuario</label>
-                        <select name="tipoUsuario" id="tipoUsuario" class="selectIniciar" required>
-                            <option value="">--Selecciona una Tipo de usuario--</option>
+                        <label for="tipoUsuarioOpcion">Tipo de usuario</label required>
+                        <select name="tipoUsuario" id="tipoUsuarioOpcion" class="selectIniciar" >
+                            <option value="">--Selecciona un Tipo de usuario--</option>
                             <option value="Usuario">Usuario</option>
-                            <option value="Pasedor/a">Pasedor/a</option>
+                            <option value="Paseador/a">Paseador/a</option>
                             <option value="Organizaciones/Veterinaria">Organizaciones/Veterinaria</option>
                         </select>
                     </div>
                     <div class="itemform">
-                        <label for="provincia">Provincia</label>
-                        <select name="provincia" id="provincia" class="selectIniciar" required>
+                        <label for="provinciaOpcion">Provincia</label>
+                        <select name="provincia" id="provinciaOpcion" class="selectIniciar" required >
                             <option value="">--Selecciona una Provincia--</option>
                             <option value="buenosaires">Buenos Aires</option>
                             <option value="catamarca">Catamarca</option>
@@ -67,7 +64,7 @@
                             <option value="rionegro">Río Negro</option>
                             <option value="salta">Salta</option>
                             <option value="san_juan">San Juan</option>
-                            <option value="san_lucas">San Luis</option>
+                            <option value="san_luis">San Luis</option>
                             <option value="santa_cruz">Santa Cruz</option>
                             <option value="santa_fe">Santa Fe</option>
                             <option value="santiago_del_estero">Santiago del Estero</option>
@@ -77,33 +74,13 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Registrar" id="Registrar">
+            <input type="submit" value="Registrar" id="registro">
+            <p>Ya tienes en cuenta? <a href="inciarsesion.html">Inicia Sesion </a></p>
         </form>
-        <div class="imgperro"><img src="Imagenes/Vector-Perro-Login.png" alt=""></div>
+        
+        <div class="imgperro"><img src="Imagenes/Vector-Perro-Login.png" alt="Imagen de perro"></div>
     </section>
         
-            <script src="./JS/datosUsuarios.js"></script>
-            <script src="./JS/tomarDatos.js"></script>
-    
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

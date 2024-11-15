@@ -1,0 +1,73 @@
+/* FORMULARIO AGREGAR MASCOTA EN ADOPCION */
+#addModalMascota{
+    border-radius: 20px;
+    background-color:  #4f6f52; 
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#addDataFormMascotaAdopcion{
+    justify-content: center;
+    align-items: center;
+}
+#botonesAgregar {
+    display:block;
+    background-color: none;
+}
+.BotonAgregar{
+    cursor: pointer;
+    background-color: rgba(1, 0, 0, 0);
+    padding: 10px 20px 10px ;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 18px;
+    color: white;
+   
+    transition: 
+    opacity     1s,
+    box-shadow .5s, /* Nombre y tiempo de la animación */
+    transform .2s ease-in-out,
+    font-size .2s,
+    background-color .2s ease-in-out;
+  
+}
+.BotonAgregar:hover{
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.13);
+    box-shadow: -2px 2px 2px rgba(66, 66, 66, 0.377);
+    padding: 10px 22px 10px ;
+    font-size: 20px;
+
+}
+/* FIN FORMULARIO AGREGAR MASCOTA EN ADOPCION */
+
+/* FORMULARIO AGREGAR MASCOTA PERDIDA */
+#addModalMascotaPerdida{
+    border-radius: 20px;
+    background-color:  #4f6f52; 
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+
+/* FIN FORMULARIO AGREGAR MASCOTA PERDIDA */
+/* FORMULARIO AGREGAR PASEADOR */
+#addModalPaseador{
+    border-radius: 20px;
+    background-color:  #4f6f52; 
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+/* FIN FORMULARIO AGREGAR PASEADOR */
