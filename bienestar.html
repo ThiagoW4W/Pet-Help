@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienestar</title>
     <link rel="stylesheet" href="./CSS/bienestar.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="CSS/Modales-Form.css">
+    <link rel="stylesheet" href="CSS/Modales-Mostrar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="./JS/fetchs/navbar.js"></script>
     <script defer type="module" src="./JS/script.js" ></script>
+    <script defer type="module" src="JS/publicarServicios.js"></script>
+    <script defer type="module" src="JS/publicarBienestar.js"></script>
     
 </head>
 <body>
@@ -22,36 +27,240 @@
     </div></div>
     <section id="contactos">
         <h1 id="veterinarias" class="title">Veterinarias</h1>
-        <select name="filtro" class="filtro">
-            <option value="0">Filtro</option>
-        </select>
-        <div class="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/img-tarjeta-vete.jpg" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
+        
+        <div class="tarjetas" id="tarjetaVeterinaria">
+            <div class="tarjeta" >
+                <h2>Agregar Veterinaria</h2>
+                <button class="agregarBoton" onclick="document.getElementById('addModalVeterinaria').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
+                <button class="agregarBoton" onclick="document.getElementById('verVeterinaria').showModal()"></button>
+            </div>   
         </div>
         <h1 id="organizaciones" class="title">Organizaciones</h1>
-        <select name="filtro" class="filtro">
-            <option value="0">Filtro</option>
-        </select>
-        <div class="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-        </div>
+        
+        <div class="tarjetas" id="tarjetaOrganizaciones">
+            <div class="tarjeta">
+                <h2>Agregar Organización</h2>
+                <button class="agregarBoton" onclick="document.getElementById('addModalOrganizacion').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
+                <button class="agregarBoton" onclick="document.getElementById('verOrganizacion').showModal()"></button>
+            </div>    
         <h1 id="transito" class="title">Lugares de transito</h1>
-        <select name="filtro" class="filtro">
-            <option value="0">Filtro</option>
-        </select>
+            
         <div class="tarjetas">
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-1" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-2" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-3" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-            <div class="tarjeta"><h1>Nombre</h1><img class="img-tarjeta" src="./Imagenes/" alt="Opción-4" title="nombreVete"><p>Descripcion-Descripcion-Descripcion-Descripcion-Descripcion-</p></div>
-        </div>
+            <div class="tarjeta">
+                <h2>Agregar Lugar de transito</h2>
+                <button class="agregarBoton" onclick="document.getElementById('addModalTransito').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
+            </div>        </div>
     </section>
     <button id="volverInicio" onclick="volverInicio()">↑</button>
+    
+    <dialog id="addModalVeterinaria">
+        <span id="close-btn-mascota" onclick="document.getElementById('addModalVeterinaria').close()">X</span>
+            <h2>Agregar Veterinaria</h2>
+            <form id="addDataFormVeterinaria">
+                <div id="Izquierda">
+                    <label for="nombre">Nombre:</label>
+                    <div><input type="text" id="nombreVeterinaria" required></div>
+
+                    <label for="provinciaVeterinaria">Provincia:</label>
+                    <div><input type="text" id="provinciaVeterinaria" required></div>
+
+                    <label for="localidadVeterinaria">Localidad:</label>
+                    <div><input type="text" id="localidadVeterinaria" required></div>
+
+                    <label for="ubicacionVeterinaria">Ubicacion:</label>
+                    <div><input type="text" id="ubicacionVeterinaria" required></div>
+
+                    <label for="disponibildadVeterinaria">Disponibildad:</label>
+                    <div><input type="text" id="disponibildadVeterinaria" required></div>
+
+                    <label for="contactoVeterinaria">Contacto:</label>
+                    <div><input type="text" id="ContactoVeterinaria" required></div>
+                </div>
+            <div id="Derecha">
+                <div><label for="EspecialidadVeterinaria">Especialidad:</label></div>
+                <div><textarea name="" id="EspecialidadVeterinaria"></textarea></div>
+
+                <div><label for="DescpcionVeterinaria">Descripcion:</label></div>
+                <div><textarea name="" id="DescpcionVeterinaria"></textarea></div>
+
+                <div><label for="">Foto del Veterinaria </label></div>
+                <div><input type="file" id="fotoVeterinaria" accept="image/*"></div>
+            </div>
+                            <div id="botonesAgregar">
+            <button type="submit" class="BotonAgregar">Guardar</button>
+            </div>
+            </div>
+            </form>
+        </dialog>
+
+        <dialog id="addModalOrganizacion">
+            <span id="close-btn-mascota" onclick="document.getElementById('addModalOrganizacion').close()">X</span>
+                <h2>Agregar Organizacion</h2>
+                <form id="addDataFormOrganizacion">
+                    <div id="Izquierda">
+                        <label for="nombre">Nombre:</label>
+                        <div><input type="text" id="nombreOrganizacion" required></div>
+    
+                        <label for="provinciaOrganizacion">Provincia:</label>
+                        <div><input type="text" id="provinciaOrganizacion" required></div>
+    
+                        <label for="LocalidadOrganizacion">Localidad:</label>
+                        <div><input type="text" id="LocalidadOrganizacion" required></div>
+    
+                        <label for="DisponibildadOrganizacion">Disponibildad:</label>
+                        <div><input type="text" id="DisponibildadOrganizacion" required></div>
+    
+                        <label for="ContactoOrganizacion">Contacto:</label>
+                        <div><input type="text" id="ContactoOrganizacion" required></div>
+                    </div>
+                <div id="Derecha">
+                    <div><label for="OrientacionOrganizacion">Orientacion:</label></div>
+                    <div><textarea name="" id="OrientacionOrganizacion"></textarea></div>
+    
+                    <div><label for="DescpcionOrganizacion">Descripcion:</label></div>
+                    <div><textarea name="" id="DescpcionOrganizacion"></textarea></div>
+    
+                    <div><label for="">Foto del Organizacion </label></div>
+                    <div><input type="file" id="fotoOrganizacion" accept="image/*"></div>
+                </div>
+                                <div id="botonesAgregar">
+                <button type="submit" class="BotonAgregar">Guardar</button>
+                </div>
+                </div>
+                </form>
+            </dialog>
+            <dialog id="addModalTransito">
+                <span id="close-btn-mascota" onclick="document.getElementById('addModalTransito').close()">X</span>
+                    <h2>Agregar Transito</h2>
+                    <form id="addDataFormTransito">
+                        <div id="Izquierda">
+                            <label for="nombre">Nombre:</label>
+                            <div><input type="text" id="nombreTransito" required></div>
+        
+                            <label for="provinciaTransito">Provincia:</label>
+                            <div><input type="text" id="provinciaTransito" required></div>
+        
+                            <label for="LocalidadTransito">Localidad:</label>
+                            <div><input type="text" id="LocalidadTransito" required></div>
+        
+                            <label for="BarrioTransito">Barrio:</label>
+                            <div><input type="text" id="BarrioTransito" required></div>
+        
+                            <label for="DisponibildadTransito">Disponibildad:</label>
+                            <div><input type="text" id="DisponibildadTransito" required></div>
+        
+                            <label for="ContactoTransito">Contacto:</label>
+                            <div><input type="text" id="ContactoTransito" required></div>
+
+                            <label for="CapacidadMaxTransito">Capacidad Maxima:</label>
+                            <div><input type="text" id="CapacidadMaxTransito" required></div>
+                        </div>
+                    <div id="Derecha">
+                        <div><label for="EspecialidadTransito">Especialidad:</label></div>
+                        <div><textarea name="" id="EspecialidadTransito"></textarea></div>
+        
+                        <div><label for="DescpcionTransito">Descripcion:</label></div>
+                        <div><textarea name="" id="DescpcionTransito"></textarea></div>
+        
+                        <div><label for="">Foto del Transito </label></div>
+                        <div><input type="file" id="fotoTransito" accept="image/*"></div>
+                    </div>
+                                    <div id="botonesAgregar">
+                    <button type="submit" class="BotonAgregar">Guardar</button>
+                    </div>
+                    </div>
+                    </form>
+                </dialog>
+
+                <dialog class="modal" id="verVeterinaria" style=" background-color: #4f6f52; padding: 20px;">
+    
+                    <span id="close-btn-mascota" onclick="document.getElementById('verVeterinaria').close()">X</span>
+                                <h2 style="text-align: center; margin: 0;">Veterinaria</h2>
+                                <div id="modal-body-Veterinaria">
+                                    <div id="marcoPerfil">
+                                        <div class="contendor-1-Veterinaria">
+                                            <h2>Nombre Veterinaria</h2>
+                                            <p><span id="remplazarnombreVeterinaria"></span></p>
+                                            <img src="/Imagenes/img-tarjeta-Veterinaria.jpg" id="remplazarfotoVeterinaria" alt="Imagen del Veterinaria">
+                                        </div>
+                                    </div>
+                                    <div class="contendor-2-Veterinaria"> 
+                                        <h2>Provincia</h2>
+                                        <p><span id="remplazarProvinciaVeterinaria"></span></p>
+                                        <h2>Localidad</h2>
+                                        <p><span id="remplazarLocalidadVeterinaria"></span></p>
+                                        <h2>Barrio</h2>
+                                        <p><span id="remplazarBarrioVeterinaria"></span></p>
+                                    </div>
+                                    <div id="contactos-popup-Veterinaria">
+                                        <div class="contendor-3-Veterinaria">
+                                            <h2>Disponibilidad</h2>
+                                            <p><span id="remplazarDisponibildadVeterinaria"></span></p>
+                                        </div>
+                                        <div class="contendor-4-Veterinaria">
+                                            <h2>Contacto</h2>
+                                                <span id="remplazarContactoVeterinaria"></span>
+                                        </div>
+
+                                    </div>
+                                    <div id="datos-Veterinaria">
+                                        <div class="contendor-6-Veterinaria">
+                                            <h2>Orientacion</h2>
+                                            <p><span id="remplazarOrientacionVeterinaria"></span></p>
+                                        </div>
+                                        <div class="contendor-7-Veterinaria">
+                                            <h2>Descripcion</h2>
+                                            <p><span id="remplazarDescpcionVeterinaria"></span></p>
+                                        </div>
+
+                                    </div>
+                                
+                            </div>      
+                        </dialog>
+                        <dialog class="modal" id="verOrganizacion" style=" background-color: #4f6f52; padding: 20px;">
+    
+                            <span id="close-btn-mascota" onclick="document.getElementById('verOrganizacion').close()">X</span>
+                                        <h2 style="text-align: center; margin: 0;">Veterinaria</h2>
+                                        <div id="modal-body-Organizacion">
+                                            <div id="marcoPerfil">
+                                                <div class="contendor-1-Organizacion">
+                                                    <h2>Nombre Organizacion</h2>
+                                                    <p><span id="remplazarnombreOrganizacion"></span></p>
+                                                    <img src="/Imagenes/img-tarjeta-Organizacion.jpg" id="remplazarfotoOrganizacion" alt="Imagen del Organizacion">
+                                                </div>
+                                            </div>
+                                            <div class="contendor-2-Organizacion"> 
+                                                <h2>Provincia</h2>
+                                                <p><span id="remplazarProvinciaOrganizacion"></span></p>
+                                                <h2>Localidad</h2>
+                                                <p><span id="remplazarLocalidadOrganizacion"></span></p>
+
+                                            </div>
+                                            <div id="contactos-popup-Organizacion">
+                                                <div class="contendor-3-Organizacion">
+                                                    <h2>Disponibilidad</h2>
+                                                    <p><span id="remplazarDisponibildadOrganizacion"></span></p>
+                                                </div>
+                                                <div class="contendor-4-Organizacion">
+                                                    <h2>Contacto</h2>
+                                                        <span id="remplazarContactoOrganizacion"></span>
+                                                </div>
+        
+                                            </div>
+                                            <div id="datos-Organizacion">
+                                                <div class="contendor-6-Organizacion">
+                                                    <h2>Orientacion</h2>
+                                                    <p><span id="remplazarOrientacionOrganizacion"></span></p>
+                                                </div>
+                                                <div class="contendor-7-Organizacion">
+                                                    <h2>Descripcion</h2>
+                                                    <p><span id="remplazarDescpcionOrganizacion"></span></p>
+                                                </div>
+        
+                                            </div>
+                                        
+                                    </div>      
+                                </dialog>
+
 </body>
 </html>

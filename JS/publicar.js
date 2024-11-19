@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
-import {  getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
+import {  getAuth } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
 
 
 // Configuración de Firebase
@@ -17,27 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-// Función para verificar si el usuario está registrado en la base de datos
-async function verificarUsuarioRegistrado() {
-    onAuthStateChanged(auth, async (user) => {
-        if (user) {
-            const uid = user.uid; // Obtener el UID del usuario autenticado
-            const docRef = doc(db, "usuarios", uid); 
-            const docSnap = await getDoc(docRef);
-            console.log(uid);
-            
 
-            if (!docSnap.exists()) {
-                // Si el UID no en la bd va página de inicio de sesión
-                window.location.href = "../inciarsesion.html";
-            }
-        } else {
-            // Si no hay un usuario autenticado, va a iniciar sesión
-            window.location.href = "../inciarsesion.html";
-        }
-    });
-} 
-verificarUsuarioRegistrado()
 // Función para agregar datos a Firestore y crear un botón
 document.getElementById('addDataForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -56,7 +36,6 @@ document.getElementById('addDataForm').addEventListener('submit', async (e) => {
         const file = fotoInputAdopcion.files[0];
         fotoBase64Adopcion = await convertirABase64(file); // Convierte la imagen a Base64
     }
-   
     try {
         // Agregar el documento a la colección 'Mascotas'
         const docRef = await addDoc(collection(db, 'Mascotas'), { 
@@ -72,10 +51,7 @@ document.getElementById('addDataForm').addEventListener('submit', async (e) => {
         console.log(DatosGenerales);
         
         console.log("Documento añadido con ID: ", docRef.id);
-        
-        
         crearBotonMascota(docRef.id, nombre, DatosGenerales);
-
         // Cerrar el modal y resetear el formulario
         document.getElementById('addModalMascota').close();
         document.getElementById('addDataForm').reset();
@@ -89,7 +65,6 @@ document.getElementById('addDataForm').addEventListener('submit', async (e) => {
 
 
 async function crearBotonMascota(docId, nombre,DatosGenerales) {
-
     const divContainer = document.createElement('div');
     divContainer.classList.add('tarjeta');
     const button = document.createElement('button');
@@ -109,23 +84,17 @@ async function crearBotonMascota(docId, nombre,DatosGenerales) {
     subtitulo.textContent = DatosGenerales;
     divContainer.appendChild(subtitulo);
 
-
     //Poner la imagen de la BD en imagenDelBoton
     const docRef = doc(db, 'Mascotas', docId);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
         const data = docSnap.data();
-        console.log("existe");
-        
         // Aquí, en lugar de `document.getElementById('imagenDelBoton')`, usas `data-id`
-        const imagenElemento = button.querySelector('[data-id="' + docId + '"]');
-        
+        const imagenElemento = button.querySelector('[data-id="' + docId + '"]'); 
         if (imagenElemento) {
             imagenElemento.src = data.fotoAdopcion || '';  // Agregar la imagen al botón
-        }
-
-        console.log(data.fotoAdopcion);
+        }    
     }
     button.onclick = async () => {
         // Mostrar el modal con los datos del documento
@@ -140,7 +109,6 @@ async function ObtenerYrellenar(docId) {
 
         if (docSnap.exists()) {
             const data = docSnap.data();
-
             document.getElementById('remplazarNombre').textContent = data.nombre || 'No disponible';
             document.getElementById('remplazarProvincia').textContent = data.Provincia || 'No disponible';
             document.getElementById('remplazarLocalidad').textContent = data.Localidad || 'No disponible';
@@ -148,11 +116,8 @@ async function ObtenerYrellenar(docId) {
             document.getElementById('remplazarDatosGenerales').textContent = data.DatosGenerales || 'No disponible';
             document.getElementById('remplazarApariencia').textContent = data.Apariencia || 'No disponible';
             document.getElementById('remplazarContacto').textContent = data.Contacto || 'No disponible';
-
             // Mostrar la imagen si existe
             document.getElementById('imagenMascotaAdopcion').src = data.fotoAdopcion || ''; // Agregar la imagen al elemento `imagenMascotaAdopcion`
-           
-            
             const modal = document.getElementById("mainModal");
             if (modal) {
                 document.body.classList.add('modal-open');
@@ -267,7 +232,7 @@ async function crearBotonMascotaPerdido(docId, nombrePerdido,DatosGeneralesPerdi
 
     if (docSnap.exists()) {
         const data = docSnap.data();
-        console.log("existe");
+        
         
         // Aquí, en lugar de `document.getElementById('imagenDelBoton')`, usas `data-id`
         const imagenElemento = button.querySelector('[data-id-Perdidas="' + docId + '"]');
@@ -276,7 +241,7 @@ async function crearBotonMascotaPerdido(docId, nombrePerdido,DatosGeneralesPerdi
             imagenElemento.src = data.fotoPerdido || '';  // Agregar la imagen al botón
         }
 
-        console.log(data.fotoPerdido);
+        
     }
     button.onclick = async () => {
         // Mostrar el modal con los datos del documento

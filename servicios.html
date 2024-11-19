@@ -20,57 +20,55 @@
 </head>
 <body>
     <div id="Navbar"></div>
-    
+
     <dialog class="modal" id="verPaseador" style=" background-color: #4f6f52; padding: 20px;">
-    
         <span id="close-btn-mascota" onclick="document.getElementById('verPaseador').close()">X</span>
-                    <h2 style="text-align: center; margin: 0;">Paseador</h2>
-                    <div id="modal-body-paseador">
-                        <div id="marcoPerfil">
-                            <div class="contendor-1-paseador">
-                                <h2>Nombre Paseador</h2>
-                                <p><span id="remplazarnombrePaseador"></span></p>
-                                <img src="/Imagenes/img-tarjeta-paseador.jpg" id="remplazarfotoPaseador" alt="Imagen del Paseador">
-                            </div>
-                        </div>
-                        <div class="contendor-2-paseador"> 
-                            <h2>Provincia</h2>
-                            <p><span id="remplazarProvinciaPaseador"></span></p>
-                            <h2>Localidad</h2>
-                            <p><span id="remplazarLocalidadPaseador"></span></p>
-                            <h2>Barrio</h2>
-                            <p><span id="remplazarBarrioPaseador"></span></p>
-                        </div>
-                        <div id="contactos-popup-paseador">
-                            <div class="contendor-3-paseador">
-                                <h2>Disponibilidad</h2>
-                                <p><span id="remplazarDisponibildadPaseador"></span></p>
-                            </div>
-                            <div class="contendor-4-paseador">
-                                <h2>Contacto</h2>
-                                    <span id="remplazarContactoPaseador"></span>
-                            </div>
-                            <div class="contendor-5-paseador">
-                                <h2>Capacidad</h2>
-                                <p><span id="remplazarCapacidadMAXPaseador"></span></p>
-                            </div>
-                        </div>
-                        <div id="datos-paseador">
-                            <div class="contendor-6-paseador">
-                                <h2>Orientacion</h2>
-                                <p><span id="remplazarOrientacionPaseador"></span></p>
-                            </div>
-                            <div class="contendor-7-paseador">
-                                <h2>Descpcion</h2>
-                                <p><span id="remplazarDescpcionPaseador"></span></p>
-                            </div>
-                            <div class="contendor-8-paseador">
-                                <h2>Tipos de animal</h2>
-                                <p><span id="remplazarTipoAnimalPaseador"></span></p>
-                            </div>
-                        </div>
-                    
-                </div>      
+        <h2 style="text-align: center; margin: 0;">Paseador</h2>
+        <div id="modal-body-paseador">
+            <div id="marcoPerfil">
+                <div class="contendor-1-paseador">
+                    <h2>Nombre Paseador</h2>
+                    <p><span id="remplazarnombrePaseador"></span></p>
+                    <img src="/Imagenes/img-tarjeta-paseador.jpg" id="remplazarfotoPaseador" alt="Imagen del Paseador">
+                </div>
+            </div>
+            <div class="contendor-2-paseador"> 
+                <h2>Provincia</h2>
+                <p><span id="remplazarProvinciaPaseador"></span></p>
+                <h2>Localidad</h2>
+                <p><span id="remplazarLocalidadPaseador"></span></p>
+                <h2>Barrio</h2>
+                <p><span id="remplazarBarrioPaseador"></span></p>
+            </div>
+            <div id="contactos-popup-paseador">
+                <div class="contendor-3-paseador">
+                <h2>Disponibilidad</h2>
+                <p><span id="remplazarDisponibildadPaseador"></span></p>
+            </div>
+            <div class="contendor-4-paseador">
+                <h2>Contacto</h2>
+                <span id="remplazarContactoPaseador"></span>
+            </div>
+            <div class="contendor-5-paseador">
+                <h2>Capacidad</h2>
+                <p><span id="remplazarCapacidadMAXPaseador"></span></p>
+            </div>
+            </div>
+            <div id="datos-paseador">
+                <div class="contendor-6-paseador">
+                    <h2>Orientacion</h2>
+                    <p><span id="remplazarOrientacionPaseador"></span></p>
+                </div>
+                <div class="contendor-7-paseador">
+                    <h2>Descpcion</h2>
+                    <p><span id="remplazarDescpcionPaseador"></span></p>
+                </div>
+                <div class="contendor-8-paseador">
+                    <h2>Tipos de animal</h2>
+                    <p><span id="remplazarTipoAnimalPaseador"></span></p>
+                </div>
+            </div>
+        </div>      
             </dialog>
             <dialog id="addModalPaseador">
                 <span id="close-btn-mascota" onclick="document.getElementById('addModalPaseador').close()">X</span>
@@ -228,17 +226,19 @@
 
         <div class="tarjetas" id="tarjetaPaseador">
            
-            <div class="tarjeta"><h2>Agregar Paseador</h2><button class="agregarBoton" onclick="document.getElementById('addModalPaseador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
-        
-        </div>
+            <div class="tarjeta">
+                <h2>Agregar Paseador</h2>
+                <button class="agregarBoton" onclick="document.getElementById('addModalPaseador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
+            </div>
 
         <!--Cuiadadores-->
 
         <h1 id="cuidadores" class="title">Cuiadadores</h1>
 
         <div class="tarjetas" id="tarjetaCuidador" >
-            <div class="tarjeta"><h2>Agregar Cuidador</h2><button class="agregarBoton" onclick="document.getElementById('addModalCuidador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
-
+            <div class="tarjeta">
+                <h2>Agregar Cuidador</h2>
+                <button class="agregarBoton" onclick="document.getElementById('addModalCuidador').showModal()"><img src="Imagenes/Mas.png" alt="" srcset=""></button> </div>
         </div>
 
    </section>
